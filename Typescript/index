@@ -1,0 +1,8 @@
+// compile - tsc <file>.ts
+
+// Javascript uses "dynamic types" (resolved at runtime).
+// Typescript uses "static types" (set during development while compiling).
+
+// In TypeScript, you work with types like string or number all the times.
+// Important: It is string and number (etc.), NOT String, Number etc.
+// The core primitive types in TypeScript are all lowercase!

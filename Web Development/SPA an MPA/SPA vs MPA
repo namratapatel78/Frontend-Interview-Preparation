@@ -1,0 +1,15 @@
+<!-- SPA -->
+
+SPA - Single page application is an app that works inside a browser and does not require page reload during use.
+
+SPA's are all about serving an outstanding user experience by trying to imitate a natural environment insise web browser - no page reloads, no extra wait time.
+
+It has just one html page which that you visit which then loads all the other content using JavaScript.
+
+eg Trello - It updates the UI without refreshing the page
+
+<!-- MPA -->
+
+Multipage application works in a traditional way. Every change like submit the data or submit data back to server, sends a request to the server to render a new page in the browser.
+
+Whenever user navigates from one page to another, it sends a new request to the server to send a new HTML file for that url. The server returns a file and then html file is loaded in the browser.

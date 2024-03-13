@@ -1,0 +1,12 @@
+CSRF - Cross site request forgery
+cross-origin http request
+
+CORS - Cross origin resource sharing
+
+Browser takes care of SOP(Same origin policy)
+For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts
+
+CORS gives us options to relax SOP
+
+access-control-allow-credentials: true
+access-control-allow-methods: POST, GET

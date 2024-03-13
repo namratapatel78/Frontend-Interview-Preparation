@@ -1,0 +1,27 @@
+// Common
+// Build UI Interfaces from reusable components
+// All offers great performance
+
+
+// Angular 7 (.ts) and AngularJs (.js) 
+// Vanilla JS - Split b/w HTML (template) and JS (logic)
+// Steep learning curve
+// Angular CLI
+// need to learn typescript
+// No need to learn mix structure
+// Complex setup
+
+
+// React 
+// No separation b/w HTML & JS - JSX (special syntax - mix of html and js)
+// We can use typescript with React if you want
+// new - React hooks
+
+
+// Vue
+// Vanilla JS - Split b/w HTML (template) and JS (logic)
+// Easy to learn
+// Linear lerning curve
+// Vue CLI
+// NO need of complex setup
+// new - Vue 3

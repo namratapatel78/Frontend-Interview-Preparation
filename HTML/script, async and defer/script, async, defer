@@ -1,0 +1,16 @@
+<!-- https://www.youtube.com/watch?v=BMuFBYw91UQ&t=13s -->
+
+<!-- Parsing is done by the browser
+
+<script> - will block the parsing of HTML page while fetching/downloading and executing the script.
+
+<script async> - Blocks the HTML parsing only while executing script.
+use this for scripts which are not dependent on other scripts i.e. Analytics
+Scripts gets executed in the random order.
+
+<script defer> - Fetch/Downloads the script while HTML parsing and executes it after parsing is done
+Executes the script before DOM is loaded. If the script relies upon or is relied upon by another script then use defer.
+Scripts gets executed in the order appeared in document .
+
+Because of the blocking nature of <script> we use to keep scripts tag in the end of the <body>.
+But with async and differ, we don't need to do that. -->

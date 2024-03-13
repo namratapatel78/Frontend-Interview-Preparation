@@ -1,0 +1,24 @@
+Source: https://github.com/harblaith7/React-Testing-Library-Net-Ninja
+
+The core library, DOM testing library
+
+The core library has been wrapped to provide ergonomic APIs for several frameworks, including React, Angular, and Vue. 
+
+// screen.debug();
+
+dependencies:
+"@testing-library/jest-dom": "^5.16.4",
+"@testing-library/react": "^12.1.2",
+"@testing-library/user-event": "^12.1.2",
+
+// Three types of test : unit, integration and E2E
+unit : one component
+integration: Interaction b/w multiple components
+E2E: Testing end to end all the features available in the product
+
+// Test block
+
+1. Render a component that needs to be tested
+2. Find the elements we want to interact with
+3. Interact with the elements (click, change, drag events etc)
+4. Assert that the results are as expected

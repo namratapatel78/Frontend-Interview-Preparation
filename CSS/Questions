@@ -1,0 +1,50 @@
+1. What is CSS selector specificity and how does it work?
+   The browser determines what styles to show on an element depending on the specificity of CSS rules.
+
+   1. is whether inline styles are being used. If the property declaration is an inline style on the element, a is 1, else 0.
+   2. is the number of ID selectors.
+   3. is the number of classes, attributes and pseudo-classes selectors.
+   4. is the number of tags and pseudo-elements selectors.
+
+   To override css we can use !important
+
+2. What is the difference between reset CSS and normalize CSS?
+   Reset CSS attempts to remove all built-in browser styling, while normalize CSS aims for consistency in built-in browser styling across browsers. Normalize CSS also fixes bugs for common browser dependencies.
+
+3. What is z-index?
+
+4. What is a CSS preprocessor? What are SASS, LESS, and Stylus? Why do people use them?
+   It extends the basic functionality of default vanilla CSS through its own scripting language. With a CSS preprocessor, it is possible to use complex logical syntax such as variables, mixins, functions, code nesting, inheritance, etc.
+
+   variables: $sb-orange: #f58024;
+
+5. What are pseudo elements (::) and pseudo classes (:)?
+   Pseudo elements help to create items that do not normally exist in the document tree. The examples of pseudo elements are:
+
+   ::before
+   ::after
+   ::selection
+   ::first-letter
+   ::first-line
+
+   Pseudo classes select regular elements under specific conditions such as when a user is hovering over a link. The examples of pseudo classes are:
+
+   :hover
+   :active
+   :link
+   :visited
+   :focus
+
+6. CSS Flex
+
+7. What's the difference between a relative, fixed, absolute and statically positioned element?
+
+   static - The default position; the element will flow into the page as it normally would. The top, right, bottom, left and z-index properties do not apply.
+
+   relative - The element's position is adjusted relative to itself, without changing layout (and thus leaving a gap for the element where it would have been had it not been positioned).
+
+   absolute - The element is removed from the flow of the page and positioned at a specified position relative to its closest positioned ancestor if any, or otherwise relative to the initial containing block. Absolutely positioned boxes can have margins, and they do not collapse with any other margins. These elements do not affect the position of other elements.
+
+   fixed - The element is removed from the flow of the page and positioned at a specified position relative to the viewport and doesn't move when scrolled.
+
+   sticky - Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.

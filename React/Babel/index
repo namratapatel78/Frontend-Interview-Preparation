@@ -1,0 +1,16 @@
+https://babeljs.io/docs/en/plugins/
+
+Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a 
+backwards compatible version of JavaScript in current and older browsers.
+
+The new browsers does not support ES6+
+
+- Transform syntax
+- Polyfill features that are missing in your target environment (through @babel/polyfill)
+
+Babel can convert JSX syntax using React preset (@babel/preset-react)
+Babel can convert Typescript syntax using typescript preset (@babel/preset-typescript)
+
+Plugins run before Presets.
+Plugin ordering is first to last.
+Preset ordering is reversed (last to first).

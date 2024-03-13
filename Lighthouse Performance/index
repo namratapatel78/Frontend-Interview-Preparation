@@ -1,0 +1,7 @@
+First Contentfull paint: The amount of time it took for any bit of the first text or image to render.
+
+First Meaningful paint: The amount of time it took for a first complete text or image to render.
+
+Speed index: The amount of time it took for the last text or image to render, in seconds.
+
+Time to interactive: The amount of time it took for the page to become fully interactive.

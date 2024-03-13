@@ -1,0 +1,12 @@
+1. Added Semantics element - <header>, <nav>, <section>, <form>, <footer>, <label>, <progress>
+2. <audio> and </video> elements embed
+3. Added new <input> types: email, password, search, url, text, number, button, checkbox, radio, range, 
+   date, datetime, datetime-local, month, time, week, color(color-picker), tel(telephone number), file
+4. Attributes: accept(filetypes), alt, autocomplete, autofocus, checked, disabled, 
+   max, min, name, pattern, required, type, size
+5. Attribute selectors - ::placeholder
+6. Drag and drop
+7. Device access using camera api
+8. contentEditable
+9. Regular expression - pattern attribute
+10. async and defer attribute - <script async> and <script defer>

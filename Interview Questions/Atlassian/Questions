@@ -1,0 +1,66 @@
+1. A coding challenge that want me to complete a front end of a page using stack operations for displayed data.
+
+2.
+- Javascript focused, promises
+- Browser Coding, think in components and testability
+- System Design, wireframe, which tech to use and why, API and requests/responses design
+- Behavioral interviews, come prepared with stories that show the values of Atlassian. One general and one more focused on the technical side of dev.
+
+3.
+Design the UI/UX experience of a Jira board (personal and team).
+
+4.
+Firstly, normal initial screening call, to understand experience and technologies.
+
+round 1: Browser coding→ develop the given problem statement using any frontend framework (recursive).
+
+round 2: JavaScript → develop a common module that can be used by multiple applications to fetch db data for given key. (memoization)
+
+round 3: system design: how to make boards kind of UI → what all micro-components?
+frameworks?
+how to deploy this?
+what would high-level design be?
+API contracts?
+
+Round 4: Atlassian Values (interviewer was an engineering manager)
+1. a situation where you had differences of opinion with?
+2. received constructive criticism?
+3. given constructive criticism.
+4. how did you deal with customers?
+5. Any change that you made resulted in an issue for customers, and how did you rectify it?
+6. my key contributions throughout as an individual and as a team.
+7. Anything you would want to change in how your team worked.
+
+Round 5: Manger rounder: (interviewer: engineering manager)
+mostly team-based and situation-based questions like the previous round.
+
+5.
+browser coding and JS coding
+
+6.
+Why would you chose let over var, const over let
+What’s the difference between window.onload and domcontentloaded, why would you use one over the other
+Why use for in over foreach over for of, what’s the difference between them
+coding: About javascript prototype, this scope.
+
+7.
+one is the coding test on Hackerrank
+the decimal to 7 based conversion.
+it is about the recursion. easy
+a robot game. not very difficult.
+Data validation. not very difficult. but I didn't have much time to do it.
+implement the tabs in vanilla JS and css.
+1. about the redux. how to implement the middleware of redux, for example, redux-thunk.
+2. Redux 's pros and cons.
+3. how to control the frequency of invoking a function, for example, call the drag event handler.(throttle)
+4. why need to use CDN. The difference between the third-party CDN and my own CDN. (Cache)
+5. difference between the async function and normal function.
+6. map and WeakMap difference. (mentioned the GC, how to implement the GC in the JS)?
+7. the security problems in the Web, how to prevent them in the traditional website or in the React ? (XSS, CSRF)
+8. Curry function. function declaration and function expression difference in ES5 and ES6. these two question is code test.
+
+involved in many communication skills and how to arrange work skills. including but not limited to：
+1. how to convince the leader to adopt your idea?
+2. how to arrange the priority of works?
+3. if do something to make a difference to the team?
+4. how to communicate with the designers and backend?

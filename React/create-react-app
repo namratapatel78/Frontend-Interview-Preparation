@@ -1,0 +1,18 @@
+npx create-react-app my-app
+
+
+Additional things to add
+
+1. Formatting
+2. Sass
+3. Axios - npm install axios
+4. React router -  npm install --save react-router
+
+
+
+
+
+
+
+
+https://github.com/academind/react-complete-guide-code/tree/03-react-basics-working-with-components

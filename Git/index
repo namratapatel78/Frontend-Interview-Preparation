@@ -1,0 +1,6 @@
+Install git or u will get it with xcode command line tools also in mac.
+
+git --version
+git config --global user.name "Namrata Patel"
+git config --global user.email "namrata290@gmail.com"
+git config --list

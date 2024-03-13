@@ -1,0 +1,32 @@
+- BST Definition
+
+Binary Search tree is a binary tree in which nodes that have lesser value are stored on the left while the nodes with a higher value are stored at the right.
+
+The left and right subtree each must also be a binary search tree. 
+There must be no duplicate nodes.
+
+A new key is always inserted at the leaf.
+Any node whose left and right children are null is known as a leaf node in a binary tree.
+
+
+- Min & Max height
+
+Min height: min dist b/w root node to the node which does not have two child. It can be one child or no child
+Max height: max dist b/w root node to the leaf node.
+
+
+- Balanced Tree
+
+If tree is balanced then the diff b/w max height and min height will be 1 at most. It can be 0 or 1.
+min height >= max height - 1
+
+When tree is balanced then searching is easier.
+
+We can make a tree balanced itself automatically when we add or remove node.
+
+- Tree traversal methods
+
+in order - left subtree -> root -> right subtree (l root r)
+pre order - explores root node first (root left right)
+post order - explores root node before root node (l r root)
+level order - breadth first search - explores the node level wise (0, 1, 2 ...)

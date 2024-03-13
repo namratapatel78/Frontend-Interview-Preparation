@@ -1,0 +1,2 @@
+We can improve performance by using ShouldComponentUpdate().
+Can be used to avoid unnecessary re-renders

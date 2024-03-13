@@ -1,0 +1,12 @@
+Tree shacking
+
+List optimization for long list
+
+Context vs Redux
+Portals
+Reconciliation
+Strict type
+Uncontrolled Components
+Pure components - Avoid unnecessary rendering - checkes prev props and prev state in ShouldComponentUpdate and return true and false based on that.
+
+Components - returns true in ShouldComponentUpdate by default

@@ -1,0 +1,3 @@
+set.has() - time complexity O(1)
+
+Array.sort() - time complexity O(n log n)

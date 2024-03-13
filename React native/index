@@ -1,0 +1,30 @@
+https://github.com/academind/react-native-practical-guide-code/blob/01-getting-started/extra-files/App.js
+
+https://reactnative.dev/
+
+React native compiles (and maps) re-usable components to respective platform equivalents.
+
+At runtime, React Native creates the corresponding Android and iOS views for those components.
+
+- Simulator : Android studio and Xcode
+
+- Xcode
+Preferences -> locations -> Command Lines Tools -> Xcode 13.2.1
+ 
+npm install -g expo-cli
+
+expo init <project-name>
+
+cd <project-name>
+
+
+- Run app in your ios device:
+Download expo go app in ios
+npm start
+scan QR
+
+commands: 
+npm start
+npm run ios
+npm run android
+npm run web

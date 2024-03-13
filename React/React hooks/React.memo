@@ -1,0 +1,9 @@
+https://javascript.plainenglish.io/when-and-when-not-to-use-react-memo-e050d3cb1ffc
+
+Since React.memo() is a higher-order component, it can wrap itself around regular 
+React functional components.
+When React components are wrapped with React.memo(), React renders the component and memoizes the result.
+If the component’s props are the same before the next render, React re-uses the memoized result. 
+By doing this, the re-render is skipped and React does not update the DOM, 
+thus achieving this performance boost. 
+The same functionality can be achieved in class components by PureComponent

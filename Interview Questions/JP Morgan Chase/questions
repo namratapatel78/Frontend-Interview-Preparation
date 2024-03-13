@@ -1,0 +1,26 @@
+React
+TypeScript
+HTML, CSS, JavaScript
+
+1. Build app using create-react-app
+2. difference between async function and setTimeout
+3. what are js data types
+4. how would you design and structure an app of my choice to solve a problem
+5. Closure
+6. How do you modularize your CSS files?
+7. What front-end frameworks do you know, what are their advantages?
+8. What are the two types of functions? What is the advantage of using constructor functions?
+9. Git commands
+10. deployment pipeline
+11. Closures, Hoisting, 2 way data binding, Fibonacci series,
+12. Difference between display: none and visibility: hidden
+13. logical questions like swapping 2 variable values without using temp variable
+14. Object oriented concepts in JavaScript.
+15. HTML5 questions on canvas and svg
+16. css questions on display properties and bootstrap including the grid layout
+classes like col- and offset
+17. Determine if two strings are an anagram
+18. Find the missing letters from a string if it doesn’t create a panagram.
+19. Implement a solution nth_largest (array, n) that takes in an array of arbitrary size and returns the nth largest element.
+20. Recursion - Write an algorithm to find the nth Fibonacci number where n < = 30.
+21. Write a function to calculate factorial.

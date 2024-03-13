@@ -1,0 +1,27 @@
+1. Write a polyfill for promise all.
+2. Reverse Linked List, Delete Node from BST
+3. Basics of Javascript
+4. project using React, JavaScript5. What is your experience with React? Explain a front end project and the choices you made.
+5. Given an array of api's, make api calls synchronously one after another each. Once all completed, execute a callback. Similar to Promise.all but just that all promises has to be resolved synchronously.
+6. dsa question
+7. js react redux
+8. faltering a object using recursion
+9. How javascript works, like the execution context and other theoretical questions like how async is handled and executed. 
+10. Question about es6 array methods
+11. https://akash-kumar916.medium.com/tekion-corp-interview-experience-offcampus-2bc63f1267c5
+12. https://leetcode.com/discuss/interview-experience/1709335/Tekion-or-Associate-Software-Engineer-Frontend-or-Jan-2022-or-Selected
+13. closures, async apis, hoisting
+14. Unnest objects in a nested JS object to the same level.
+15. https://www.codingninjas.com/studio/interview-experiences/tekion-corp/tekion-corp-interview-experience-by-dhruv-kaushal-may-2022-exp-0-2-years
+16. Discussion around the architecture of Redux
+17. https://www.geeksforgeeks.org/tekion-interview-experience/
+
+// Problems
+1. Given an unsorted array, find and remove the element after which it will be sorted.
+2. In the given string, remove all duplicate words ( Handled all corner cases )
+3. implement deepCopy
+4. DSA - two sum problem with and without sorted array
+
+
+
+// 2nd round

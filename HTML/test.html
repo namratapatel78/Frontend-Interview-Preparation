@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TEST</title>
+  </head>
+
+  <body>
+    <script>
+      let str = 'Hello';
+      let permutation = (str, result) => {
+        debugger
+        if (str.length === 0) {
+          console.log(result);
+        }
+        else {
+          for (let i=0; i<str.length; i++) {
+            console.log(str.substring(0, i) + ' ' + str.substring(i+1))
+            let rest = str.substring(0, i) + str.substring(i+1)
+            permutation(rest, result+str[i])
+          }
+        }
+      }
+      permutation(str, '');
+    </script>
+    <style>
+    </style>
+  </body>
+</html>

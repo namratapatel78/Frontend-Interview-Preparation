@@ -1,0 +1,2 @@
+console.log("using console");
+document.write("using document.write");

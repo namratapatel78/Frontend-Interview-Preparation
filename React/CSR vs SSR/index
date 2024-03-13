@@ -1,0 +1,45 @@
+Web vitals  terminology
+
+TTFB - Time to first Byte - Time taken for the client side to receive first byte of content (CSR < SSR)
+In CSR initailly the server has to render the static index.html that's why TTFB is less
+
+FP - First Paint - Time when first pixel was visible to user
+CSR - When browser renders the static index.html. Show blank screen until the whole js is loaded
+
+FCP - First Contentful Paint - Time taken for the first piece of content to be visible
+CSR - When browser executes the JS
+
+Time to interactive - Time at which the page becomes interactive and reliably responds to user events
+CSR - After FCP when JS is executed
+
+LCP - Largest Contentful Paint - The time it takes for the main content of page to be visbile
+CSR - After fetching the data from api required in the screen
+
+https://www.linkedin.com/pulse/server-side-rendering-vs-client-understanding-anbarasan-rathinam/
+
+CSR - Client side rendering
+1. The browser generates the HTML file and renders it on the user’s screen.
+3. Fast initial loading - less TTFB
+4. Mostly used for static content. e.g: blogs
+
+Advantages:
+1. Comprised of just static files, it can easily be served via just a CDN
+2. Allows us to have navigations wothout full page reload
+3. The fast TTFB allows browsers to immediately start loading assets like fonts, CSS, JavaScript etc.
+
+Disadvantages:
+5. Users need to download and execute the JS to be able to view the page
+6. Web crawlers might not wait long enough for client side waterfalls to finish
+7. Data Fetching will be dependent on the client's network condition
+
+----------------------------------------------------------------------------------------
+
+SSR - Server side rendering
+1. Server prepares the HTML and sends it to the browser. The browser receives the complete HTML file and displays it to the user.
+2. Slow initial loading as it needs to fetch the HTML from server - TTFB is more than CSR
+2. Clients requests the JS -> Afrer hydration app becomes interactive
+3. Used for better user experience as page reload is not a good user experience
+
+
+While both SSR and CSR have their own benefits and drawbacks, it is important to consider the specific needs of a website before deciding which approach to use. The decision should be based on the balance between performance, SEO, security, and user experience that is required for the website.
+For websites with a lot of static content and a focus on SEO, SSR is generally the better option. For websites with a lot of dynamic content and a focus on user experience, CSR is often the better choice.

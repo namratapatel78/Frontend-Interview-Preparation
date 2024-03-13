@@ -1,0 +1,27 @@
+/* selector:pseudo-class {
+  property: value;
+} */
+
+/* pseudo selectors */
+
+/*  https://www.w3schools.com/css/css_pseudo_classes.asp */
+
+div:hover {
+  color: #FF00FF;
+}
+
+p:first-child {
+  color: blue;
+}
+
+
+/* pseudo elements */
+/* https://www.w3schools.com/css/css_pseudo_elements.asp */
+
+h1::before {
+  content: url(smiley.gif);
+}
+
+h1::after {
+  content: url(smiley.gif);
+}

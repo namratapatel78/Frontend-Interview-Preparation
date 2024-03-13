@@ -1,0 +1,21 @@
+.point {
+  color: red;
+}
+p:nth-child(2n) {
+   color: green;
+}
+
+p::before {
+  content: '-'
+}
+
+.container {
+  border: 2px solid red;
+}
+
+.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: gray;
+}

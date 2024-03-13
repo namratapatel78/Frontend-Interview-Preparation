@@ -1,0 +1,15 @@
+- Nested routes
+- Controlled vs Uncontrolled Components
+
+// Functional components
+
+- A functional component is just a plain JavaScript function that accepts props as an argument and returns a React element.
+- Also known as Stateless components as they simply accept data and display them in some form, they are mainly responsible for rendering UI.
+- React lifecycle methods (for example, componentDidMount) cannot be used in functional components.
+
+// Class based components
+
+- A class component requires you to extend from React.Component
+  and create a render function which returns a React element.
+- Also known as Stateful components because they implement logic and state.
+- React lifecycle methods can be used inside class components (for example, componentDidMount).

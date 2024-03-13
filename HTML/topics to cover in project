@@ -1,0 +1,49 @@
+Inline style -> style="width: 100px;"
+
+Text styling
+- text-align: center
+- text-decoration
+- text-transform: capitalize
+- letter-spacing:
+- line-height: 
+- word-spacing
+- font-family: (need to import font link as well)
+
+
+Border
+- border-style: dotted
+- border-top-style: dashed
+- border-width:
+- border-color:
+- border: 2px double blue;
+- border-right: 2px solid red;
+- border-radius: 10px; - for curve
+
+CSS overides from top to bottom
+
+padding: t r b l
+padding: tb lr
+
+Ordered list
+list-style-type: lower-roman
+list-style-position: inside
+list-style-position: none
+
+Unordered list
+list-style-type: sqaure
+
+
+link states -> link, visited, hover, active (this should be the order)
+.menu-link:link {
+  color: blue
+}
+
+span -> display: inline
+div -> display: block
+
+visiblility: hidden -> content go away but still takes space
+display: none -> doesn't take space
+
+display: inline-block
+
+position: sticky; top: 0; - for topbar

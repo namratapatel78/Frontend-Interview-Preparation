@@ -1,0 +1,43 @@
+React is a JS library for building fast and interactive user interfaces.
+Developed by facebook in 2011
+Components are the building blocks of an React application
+main component called App
+Tree like component hierarchy
+Give example of any application
+Used for design views and rest is upto us like which library we have to use (gives you absolute control)
+
+Famous apps written in React (Facebook, Netflix, Instagram, Prime video, Twitter)
+
+With React we can design both SPA and MPA but mostly used for SPA
+
+Angular is a framework and it comes with out of the box solution routing, handling network request etc.
+So we don't have control at that level.
+
+class in JS
+className in JSX
+
+var Checkbox = React.createClass({
+getInitialState(): function() {
+return {checked: true}
+}
+
+render: function () {
+
+}
+});
+
+properties - props
+
+this.props.children
+
+List should have unique key in react
+
+<!-- https://sentry.io/answers/unique-key-prop/ -->
+
+React life cycle methods: https://www.youtube.com/watch?v=Oioo0IdoEls
+
+Redux - https://www.youtube.com/watch?v=ZKCYqJu4n3s
+
+useCallback - https://www.youtube.com/watch?v=_AyFP5s69N4
+
+useMemo - https://www.youtube.com/watch?v=THL1OPn72vo&list=PLZlA0Gpn_vH8EtggFGERCwMY5u5hOjf-h&index=3

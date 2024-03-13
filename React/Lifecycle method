@@ -1,0 +1,36 @@
+Life cycle phases:
+1. Mounting
+2. Updating
+3. Unmounting
+
+1. Mounting - Called when an instance of a component is created and inserted into the DOM.
+
+Life cycle methods:
+- constructor(props) - Not a life cycle method - If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
+e.g: constructor(props) {
+  super(props);
+  // Don't call this.setState() here!
+  this.state = { counter: 0 };
+  this.handleClick = this.handleClick.bind(this);
+}
+- getDerivedStateFromProps(props, state)
+- UNSAFE_ComponentWillMount() - It's called just before initial rendering
+- render() - Not a life cycle method
+  function TodoList() {
+   return (<div></div>);
+  }
+- ComponentDidMount() -
+  useEffect(() => {}, []);
+- UNSAFE_ComponentWillReceiveProps(nextProps) -
+- ShouldComponentUpdate(nextProps, nextState) -
+- UNSAFE_ComponentWillUpdate(nextProps, nextState)
+- ComponentDidUpdate(prevProps, prevState)
+  useEffect(() => {}, [dependency]);
+
+- ComponentWillUnMount()
+   useEffect(() => {
+      return () => {
+        console.log('componentWillUnmount');
+      }
+   }, []);
+

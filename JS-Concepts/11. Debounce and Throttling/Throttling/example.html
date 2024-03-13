@@ -1,0 +1,48 @@
+<!-- Throttling or sometimes is also called throttle function is a practice used in websites. 
+  Throttling is used to call a function after every millisecond or a particular interval of time
+  only the first click is executed immediately. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript | With Throttling</title>
+  </head>
+  <body>
+    <button id="throttle">Click Me</button>
+    <script>
+      const btn = document.querySelector("#throttle");
+
+      // Throttling Function
+      const throttleFunction = (func, delay) => {
+        // Previously called time of the function
+        let prev = 0;
+        return (...args) => {
+          // Current called time of the function
+          let now = new Date().getTime();
+          // console.log("now " + new Date(now).getSeconds());
+
+          // Logging the difference between previously called and current called timings
+          // console.log("now-prev " + new Date(now - prev).getSeconds(), delay);
+
+          // If difference is greater than delay ->  call the function again.
+          if (now - prev > delay) {
+            prev = now;
+
+            // "..." is the spread operator here
+            // returning the function with the
+            // array of arguments
+            func(...args);
+          }
+        };
+      };
+      btn.addEventListener(
+        "click",
+        throttleFunction(() => {
+          console.log("button is clicked");
+        }, 2000)
+      );
+    </script>
+  </body>
+</html>

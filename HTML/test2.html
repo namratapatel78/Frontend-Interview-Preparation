@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PIMONK</title>
+  </head>
+
+  <body>
+    <script>
+      (function(e, t, a) {
+        console.log(e, t, a);
+        debugger;
+        var s = e.head || e.getElementsByTagName("head")[0],
+          i = e.createElement("script");
+        (i.type = "text/javascript"),
+          (i.id = "peoplehum-hire-jobs-script"),
+          (i.defer = !0),
+          (i.async = !1),
+          (i.src =
+            t +
+            "/static/js/external-job-list.js?locale=en-US&base_url=" +
+            t +
+            "&config=" +
+            JSON.stringify(a)),
+          s.appendChild(i);
+      })(document, "https://hire.peoplehum.com", {
+        env: "prod",
+        short_name: "1b5db0ee-71f4-44d4-a418-1e9990a6d842",
+        container_id: "peopelhum-jobs-container",
+      });
+    </script>
+  </body>
+</html>

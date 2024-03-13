@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+
+    <script>
+      function SumValue(...arg) {
+        debugger;
+        let sum = 0;
+        for (let i of arg) {
+          sum = sum + i;
+        }
+
+        return function (...args) {
+          debugger;
+          if (args.length > 0) {
+            for (let i of args) {
+              sum = sum + i;
+            }
+            return SumValue(sum);
+          } else {
+            debugger
+            return sum;
+          }
+        };
+      }
+
+      let data = SumValue(1)(2)(3)(4)()
+      console.log(data)
+    </script>
+    <div id="data"></div>
+  </body>
+</html>

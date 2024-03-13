@@ -1,0 +1,6 @@
+devDependencies - npm install --save-dev / npm i -D
+dependencies - npm install --save / npm i -S
+
+
+devDependencies are modules which are only required during development - Babel, ESLint, Jest
+while dependencies are modules which are also required at runtime - React, Redux, Express, and Axios

@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+    flex-direction: row; /* default */
+    flex: 2; /* flex-grow / flex-shrink */
+    flex-basis: 100px; /* width */
+    order: 2;
+}

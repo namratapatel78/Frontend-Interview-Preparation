@@ -1,0 +1,14 @@
+Hooks are a new addition in React 16.8
+
+Only particular instance will be updated on using useState
+
+State is separated on per component instance basis
+
+A component which retuns jsx is called as component functions. Only these components can use react hooks.
+
+Hooks: https://react.dev/reference/react/useCallback
+
+useState
+useEffect
+useContext ??
+useRef - Get element from DOM

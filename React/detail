@@ -1,0 +1,30 @@
+install node -> brew install node@8.10 -> brew is a package manager for macOs
+nvm -> node version manager -> we can switch to other node version whenever needed
+
+React is a library
+Developed by facebook
+
+// one way - It won't work if no internet
+Add scripts for react, react-dom and transpiler script like babel for converting JSX to JS.
+The browser cannot understand JSX.
+
+// 2nd way - download react
+https://github.com/buckyroberts/React-boilerplate
+
+// Intalling package globally will make it available anywhere on your system
+// npm install -g <package-name>
+
+// installing local vs global - https://stackoverflow.com/questions/63471235/what-is-installing-packages-globally-or-locally-in-react-js-mean#:~:text=You%20should%20install%20it%20globally,project%20anywhere%20inside%20your%20system.&text=Installing%20packages%20locally%20only%20allows,react%20project%20with%20a%20package.
+
+npx create-react-app my-app
+
+When you’re ready to deploy to production, running npm run build will create an optimized build of your app in the build folder
+
+// Creating a react app using scratch - https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658
+
+Udemy course - https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25597300#overview
+course github link - https://github.com/academind/react-complete-guide-code
+
+JSX - JavaScript xml
+
+React is Isomorphic
