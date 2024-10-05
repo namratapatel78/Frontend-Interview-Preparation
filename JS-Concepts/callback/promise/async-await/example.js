@@ -2,6 +2,8 @@
 
 // https://medium.com/@lelianto.eko/callback-vs-promise-vs-async-await-in-javascri-f29a63d57f72
 
+// https://medium.com/womenintechnology/callbacks-vs-promises-vs-async-await-detailed-comparison-d1f6ae7c778a
+
 // Callback
 const getData1 = (callback) => {
  setTimeout(() => {

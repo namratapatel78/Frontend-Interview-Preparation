@@ -16,7 +16,7 @@ Array.sort() // By default, the sort() function sorts values as strings.
 
 var numbers = [6, 10, 100, 50, 3]
 numbers.sort()
-  
+
 numbers.sort(function (a, b) {
   return a-b
 })
@@ -68,6 +68,8 @@ Array.join('') // bananaappleorangegrapes
 
 Array.length // returns length of array
 
+Array.indexOf() // looping O(n)
+
 // concat() - method can take any number of array arguments:
 var myGirls = ["Cecilie", "Lone"];
 var myBoys = ["Emil", "Tobias", "Linus"];
@@ -79,7 +81,7 @@ let object = {a: 'a', b: 'b'}
 let copyObj = {...object}
 
 const numbers = [1, 2];
-const moreNumbers = [...numbers, 3]; // spread operator - 
+const moreNumbers = [...numbers, 3]; // spread operator -
 
 Math.max()
 
@@ -89,7 +91,7 @@ Math.min()
 
 
 
-// 
+//
 let str = "Hello";
 
 // Array.from converts an iterable into an array

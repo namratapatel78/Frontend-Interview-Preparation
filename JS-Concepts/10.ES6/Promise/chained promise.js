@@ -4,7 +4,6 @@ const myPromise = new Promise(myExecutorFunc)
   .then(handleFulfilledC)
   .catch(handleRejectedAny);
 
-
 // 2
 new Promise((res, rej) => {
   return res(1);

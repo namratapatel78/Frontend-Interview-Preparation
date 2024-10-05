@@ -2,6 +2,11 @@
 // if function is called in form of obj.func() -> this = obj
 // else -> this = global
 
+
+// The arrow function does not have it's own execution context but it resolves to the one from the outer function.
+// The arrow function resolves this lexically
+// this value inside the arrow function callback() equals this of the outer function myMethod().
+
 // 1.
 var myObject = {
   myFunction: function () {

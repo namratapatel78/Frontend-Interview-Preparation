@@ -42,3 +42,4 @@ Array.prototype.myReduce = function (fn, initialValue) {
 };
 const reducedValue4 = items3.myReduce((total, item) => total + item.price, 0);
 console.log(reducedValue4);
+

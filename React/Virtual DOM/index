@@ -13,6 +13,10 @@ DOM Updates: Finally, React applies these changes to the actual DOM, but only to
 Importance for Performance:
 Reduced DOM Manipulation: Manipulating the DOM is one of the most expensive operations in web development in terms of performance. By using the Virtual DOM and selectively updating only the parts of the actual DOM that have changed, React minimizes the number of DOM manipulations, resulting in better performance.
 
+Use of key:
+
+// OPTIONAL
+
 Batched Updates: React can batch multiple state updates into a single update operation. This means that if multiple state changes occur within the same event loop iteration (e.g., due to user interaction), React can combine these changes and perform a single update to the Virtual DOM, which reduces unnecessary re-renders and improves performance.
 
 Faster Rendering: Since the Virtual DOM is an in-memory representation of the DOM, operations such as querying and updating the Virtual DOM are typically faster than those on the actual DOM. This leads to faster rendering and re-rendering of components in React applications.

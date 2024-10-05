@@ -24,3 +24,25 @@ document.getElementById("debounce").addEventListener(
     console.log("clicked");
   }, 2000)
 );
+
+const debounce = (fn, delay) => {
+  let timer;
+  return function (...args) {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {fn(...args)}, delay);
+  }
+}
+
+const debounce2 = (fn, delay) => {
+  let timer;
+  return function (...args) {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      fn(...args);
+    }, delay)
+  }
+};

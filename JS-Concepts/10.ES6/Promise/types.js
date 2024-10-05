@@ -22,7 +22,7 @@ Promise.race([p1, p2, p3]);
 Promise.myAny = function(promises) {
   return new Promise((resolve, reject) => {
     for (let p of promises) {
-      Promise.resolve(p).then(res => resolve(res), err => reject(err));
+      Promise.resolve(p).then(res => resolve(res));
     }
   });
 };

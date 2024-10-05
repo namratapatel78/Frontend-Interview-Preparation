@@ -1,0 +1,5 @@
+In React, an Error Boundary is a component that catches JavaScript errors anywhere in its child component tree, logs those errors, and displays a fallback UI instead of crashing the whole component tree.
+
+static getDerivedStateFromError(error): This method is used to render a fallback UI after an error is thrown. It should return an object to update the state.
+
+componentDidCatch(error, info): This method is used to log error information. It receives the error that was thrown and a info object with details about which component threw the error.

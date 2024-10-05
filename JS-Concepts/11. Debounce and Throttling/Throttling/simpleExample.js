@@ -13,4 +13,4 @@ const throttle = (fn, delay) => {
     "click",
     throttle(() => {
       console.log("clicked");
-    }, 2000)
+    }, 2000));
