@@ -41,3 +41,5 @@ Redux - https://www.youtube.com/watch?v=ZKCYqJu4n3s
 useCallback - https://www.youtube.com/watch?v=_AyFP5s69N4
 
 useMemo - https://www.youtube.com/watch?v=THL1OPn72vo&list=PLZlA0Gpn_vH8EtggFGERCwMY5u5hOjf-h&index=3
+
+Context api vs redux: https://techifysolutions.com/blog/state-management-in-react/#:~:text=State%20management%20is%20a%20very,approach%20for%20complex%20state%20management.

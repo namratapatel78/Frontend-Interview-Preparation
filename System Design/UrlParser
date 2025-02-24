@@ -1,0 +1,26 @@
+When you type a URL into your browser, a series of behind‑the‑scenes processes occur before the web page is displayed. Here’s a step‑by‑step breakdown along with a diagram:
+
+Step‑by‑Step Process
+URL Parsing:
+The browser breaks down the URL (e.g., https://www.example.com/page) into parts—protocol (HTTPS), domain, path, etc.
+
+DNS Resolution:
+The browser checks its cache for the IP address of the domain. If it’s not found, it sends a query to a DNS server to resolve the domain name (e.g., www.example.com) into an IP address.
+
+TCP Connection:
+With the IP address in hand, the browser initiates a TCP connection to the server using a three‑way handshake (SYN, SYN‑ACK, ACK).
+
+TLS Handshake (for HTTPS):
+If the URL uses HTTPS, a secure connection is established using the TLS handshake, ensuring data encryption and server authentication.
+
+HTTP Request:
+The browser sends an HTTP request (commonly a GET request) to the server for the desired resource.
+
+Server Processing:
+The server processes the request—this may involve querying databases, running backend logic, etc.—and prepares an HTTP response with the requested content.
+
+HTTP Response:
+The server sends the response back to the browser. This response typically includes HTML, and may reference additional resources like CSS, JavaScript, images, etc.
+
+Content Rendering:
+The browser receives the response, parses the HTML, applies CSS, executes JavaScript, and may issue further requests for additional resources as needed. Finally, it renders the page for you to see.

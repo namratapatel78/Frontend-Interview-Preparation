@@ -31,7 +31,7 @@ console.log("2")
 console.log("1");
 
 setTimeout(() => {
-  console.log("setTimeout"); // macrotask - Will wait for the browserr operations to be finished and then executes the code
+  console.log("setTimeout"); // macrotask - Will wait for the browser operations to be finished and then executes the code
 }, 0);
 
 new Promise((resolve) => {

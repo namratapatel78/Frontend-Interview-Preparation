@@ -36,11 +36,11 @@ console.log(a); // 100
 let b = 100;
 setTimeout(() => {
   b++;
-  console.log("first", b);
+  console.log("first", b); // 103
 }, 1000); // asynchronous code  // off the main thread
 console.log(b); // 100
 setTimeout(() => {
   b = b + 2;
-  console.log("second ", b);
+  console.log("second ", b); // 102
 }, 500); // asynchronous code  // off the main thread
 console.log(b); // 100

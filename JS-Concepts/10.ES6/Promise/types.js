@@ -14,8 +14,8 @@ Promise.myRace = function(promises) {
     }
   });
 };
-Promise.myRace([p1, p2, p3]);
-Promise.race([p1, p2, p3]);
+Promise.myRace([p1, p2, p3]).then(res => console.log(res), err => console.log(err));
+Promise.race([p1, p2, p3]).then(res => console.log(res), err => console.log(err));
 
 
 // 2. Promise.any - Which promise resolves first

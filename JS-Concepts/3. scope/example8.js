@@ -5,4 +5,4 @@ function foo() {
 }
 
 foo();
-console.log(b); //  reference error
+console.log(b);

@@ -15,7 +15,7 @@
 // Time Complexity - O(n)
 
 // Space Complexity - O(1)
-
+// Solution 1
 function minSubArrayLen(nums, sum) {
   let total = 0;
   let start = 0;
@@ -43,4 +43,22 @@ function minSubArrayLen(nums, sum) {
   }
 
   return minLen === Infinity ? 0 : minLen;
+}
+
+// Solution 2
+function minSubArrayLen(nums, sum) {
+  let start=0, end=0, total=0;
+  let minLength = Infinity;
+  while (start < nums.length && end <= nums.length) {
+    if (total < sum) {
+      total += nums[end];
+      end++;
+    } else {
+      minLength = Math.min(minLength, end-start);
+      start++;
+      end=start;
+      total = 0;
+    }
+  }
+  return minLength === Infinity ? 0 : minLength;
 }

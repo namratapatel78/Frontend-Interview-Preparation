@@ -15,7 +15,7 @@ a();
 
 // 2.
 function a() {
-  // function b is created during creation phase of function a's execution context 
+  // function b is created during creation phase of function a's execution context
   function b() {
       console.log(myVar); // 1
   }

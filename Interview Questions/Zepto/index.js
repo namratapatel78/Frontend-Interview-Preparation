@@ -4,20 +4,18 @@
 // On click of button , create a task queue. each task takes 10s to complete At given time only 3 tasks should be executed
 // Progress bar - I need to make a progress bar and one button by clicking of button another progress bar will be shown. We can create as many progress bar as we want but 5 at a time will be working. Rest will be start after the completion of first.
 // Round 1- 2 leetcode problems Minimum grid sum - Medium Basic Calculator- Hard
-
-
+// Design Autocomplete CDN Design one portal in react
 
 // Mostly on writing polyfill for array.reduce() Promise.all()
-
-
-
 // DSA string + sliding window
 // problem-solving Javascript questions and a polyfill question
 
 
-// 1. JavaScript (Closure, Hoisting, Flattening etc) React (lifecycle, hooks) 2. UI and APIs 3. How deep linking work in RN, when application.create called, how to bridge in RN etc.
+// 1. JavaScript (Closure, Hoisting, Flattening etc)
+// React (lifecycle, hooks) 2. UI and APIs
+// 3. How deep linking work in RN, when application.create called, how to bridge in RN etc.
 
-// Design Autocomplete CDN Design one portal in react
+// 1. Vanilla js - todo lists 2. make header, body and footer, header should be at top, footer should be at bottom regardless of the screen size. 3. React.memo, useMemo and useCallback difference 4. SSR and CSR 5. Which React js version we are using, what is current version what feature is coming in upcoming react version :)). 6. event bubbling, capturing
 
 // 1. Class vs functional components 2. react hooks 3. memo 3. useCallback vs memo 4. useMemo vs React.memo 5. custom hook 6. Promise.all 7. Promise.any 8. Execute all async tasks parallely 9. LLD - How to design Autocomplete Search Bar 10. Closures 11. MultiThreading Questions
 
@@ -55,6 +53,12 @@
 // I had an interview at Zepto for the first round. The interviewer asked me several questions, including: The use of useMemo and useCallback Whether we can render a screen using useRef They asked me to run this code and explain the output: javascript Copy code (function() { console.log(a); if (true) { var a = 'a'; } console.log(a); console.log(b); const bar = function() { var b = 'b'; console.log(b); }; bar(); console.log(b); })(); They asked about Promises and requested that I write the code for Promise.all as if I were coding before ES6. They asked about Array.reduce and requested that I write code using prototype. Finally, they asked me to explain the difference between Array.filter and Array.map. I honestly answered all the questions, but I made a slight mistake with the code. I don’t know why I was rejected in the first round of the interview; I was expecting to get selected.
 
 
-// 1. Vanilla js - todo lists 2. make header, body and footer, header should be at top, footer should be at bottom regardless of the screen size. 3. React.memo, useMemo and useCallback difference 4. SSR and CSR 5. Which React js version we are using, what is current version what feature is coming in upcoming react version :)). 6. event bubbling, capturing
+
 
 // Question 1 questions were based on JS concepts. prototypal inheritance, debounce, throttle, pollyfills etc. react based question (at ending 10 mins) useMemo useCallback,memo, hocs, context and state etc
+
+
+
+// React
+
+https://medium.com/@javaScriptwithvinay/my-interview-experience-for-an-sde-2-frontend-position-at-zepto-and-advanced-javascript-coding-cd6792e74516

@@ -1,0 +1,43 @@
+1. Optimizing Initial Load Performance
+  a. Asset Optimization
+    Minification & Compression, Image Optimization
+  b. Bundling & Code Splitting
+  c. Server-Side Rendering (SSR) & Static Site Generation (SSG)
+  d. Content Delivery Networks (CDNs) & Caching
+    CDN: Serve static assets via CDNs to leverage geographic distribution, reducing latency.
+    Caching: HTTP cache headers, and service workers
+      HTTP cache headers: Cache Contro: max-age:300, must-revalidate, Etag and Last Modified
+
+2. Enhancing Runtime Performance
+  a. Efficient Rendering & Repaints
+    use techniques like virtual DOM diffing (in frameworks like React) to reduce unnecessary renders
+  b. Optimizing Animations & Interactions
+    Instead of setTimeout or setInterval, use requestAnimationFrame to ensure animations run in sync with the browser’s refresh rate
+    Throttling & Debouncing: Apply these techniques to event handlers (e.g., scroll or resize events) to avoid overloading the main thread.
+  c. Web Workers & Off-Main Thread Processing
+
+3. Network Optimization
+  a. Efficient Data Fetching
+    Lazy Loading: Load images, videos, or non-critical components only when they’re needed. The Intersection Observer API can help trigger lazy loading.
+    Preloading & Prefetching: Use <link rel="preload"> and <link rel="prefetch"> to instruct the browser about resources that will be needed soon.
+  b. API Optimization
+    Reduce Payloads: Use GraphQL endpoints that allow you to request only the necessary data.
+
+4. Profiling, Debugging & Continuous Monitoring
+  a. Performance Profiling Tools
+    Chrome DevTools: Use the Performance tab to analyze the runtime behavior, monitor frame rates, and identify bottlenecks.
+    Lighthouse: Run audits to get actionable insights on load performance, accessibility, SEO, and best practices.
+    WebPageTest: Test your page performance under different network conditions and geographies.
+
+6. Advanced Techniques
+  a. Memory Management
+    Prevent Memory Leaks:
+    Regularly profile memory usage and address leaks in event listeners, timers, or detached DOM nodes.
+    Efficient Data Structures:
+    Optimize data handling to reduce memory footprint, especially in complex applications with heavy state management.
+  b. Progressive Rendering
+    Skeleton Screens & Placeholders: Instead of spinners, use skeleton screens to give users a sense of progress during content loading.
+    Progressive Enhancement: Ensure the core functionality is accessible even if all assets haven’t loaded, then enhance the UI progressively.
+  c. Third-Party Script Management
+    Audit Third-Party Code:
+    Regularly assess the impact of external libraries and scripts. Lazy load or asynchronously load these scripts to mitigate their impact on performance.

@@ -1,12 +1,12 @@
-In React, "side effects" refer to any actions that occur within a component that aren't directly related to rendering its user interface. These can include tasks such as data fetching, DOM manipulation, subscriptions to external services, and more. React components are primarily responsible for rendering UI based on their current props and state. However, in some cases, components need to perform additional actions that affect things outside of the component itself.
+// In React, "side effects" refer to any actions that occur within a component that aren't directly related to rendering its user interface. These can include tasks such as data fetching, DOM manipulation, subscriptions to external services, and more. React components are primarily responsible for rendering UI based on their current props and state. However, in some cases, components need to perform additional actions that affect things outside of the component itself.
 
 
-Examples of Side Effects
-Data Fetching: Making HTTP requests to fetch data from an API.
-DOM Manipulation: Modifying the DOM directly, such as adding or removing elements.
-Event Listeners: Attaching event listeners to DOM elements.
-Timers and Intervals: Using setTimeout or setInterval to schedule tasks.
-Subscriptions: Subscribing to external data sources or services.
+// Examples of Side Effects
+// Data Fetching: Making HTTP requests to fetch data from an API.
+// DOM Manipulation: Modifying the DOM directly, such as adding or removing elements.
+// Event Listeners: Attaching event listeners to DOM elements.
+// Timers and Intervals: Using setTimeout or setInterval to schedule tasks.
+// Subscriptions: Subscribing to external data sources or services.
 
 
 // This code will be executed after each render

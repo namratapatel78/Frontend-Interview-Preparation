@@ -16,8 +16,7 @@ if (1) {
 }
 console.log('global scope c ' + c);
 
-
-// 2
+// 2 - IMP
 if (1) {
   var a = 1;
   console.log('if block scope a ' + a);

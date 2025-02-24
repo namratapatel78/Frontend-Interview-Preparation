@@ -10,11 +10,12 @@ Array.unshift() // adds a new element in the beginning of the array - - returns 
 
 Array.prototype()
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 Array.sort() // By default, the sort() function sorts values as strings.
 // The default sort order is ascending, built upon converting the elements into strings,
 // then comparing their sequences of UTF-16 code units values.
 
-var numbers = [6, 10, 100, 50, 3]
+var numbers = [6, 10, 100, 50, 3];
 numbers.sort()
 
 numbers.sort(function (a, b) {
@@ -32,6 +33,7 @@ delete Array[0]
 Array.splice()
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.splice(2, 0, "Lemon", "Kiwi");
+console.log(fruits);
 // The first parameter (2) defines the position where new elements should be added (spliced in).
 // The second parameter (0) defines how many elements should be removed.
 // The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
@@ -95,4 +97,4 @@ Math.min()
 let str = "Hello";
 
 // Array.from converts an iterable into an array
-alert( Array.from(str) ); // H,e,l,l,o
+console.log( Array.from(str) ); // H,e,l,l,o

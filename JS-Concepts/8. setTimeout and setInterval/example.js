@@ -4,13 +4,11 @@ var fakeCallToServer = function() {
   }, 4000);
 }
 
-
-setInterval(function() { 
+setInterval(function() {
   let insideSetInterval = new Date().toLocaleTimeString();
   console.log('insideSetInterval', insideSetInterval);
   fakeCallToServer();
 }, 2000);
-
 
 // output
 // insideSetInterval 14:13:47 -
@@ -21,5 +19,3 @@ setInterval(function() {
 // returning from server 14:13:53
 // insideSetInterval 14:13:55
 // returning from server 14:13:55
-
-

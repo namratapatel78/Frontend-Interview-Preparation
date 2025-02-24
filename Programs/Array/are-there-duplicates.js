@@ -36,6 +36,26 @@ function areThereDuplicates(...args) {
 const result = areThereDuplicates('a', 'b', 'c', 'a');
 console.log(result);
 
+// Multiple pointers approach - simple - IMP
+function areThereDuplicates(...args) {
+  // Sort the arguments
+  args.sort();
+
+  for (let i = 0; i < args.length - 1; i++) {
+      if (args[i] === args[i + 1]) {
+          return true; // A duplicate is found
+      }
+  }
+
+  return false; // No duplicates found
+}
+
+// Example usage:
+console.log(areThereDuplicates(1, 2, 3)); // false
+console.log(areThereDuplicates(1, 2, 2)); // true
+console.log(areThereDuplicates('a', 'b', 'c', 'a')); // true
+
+
 // Multiple pointers approach
 function areThereDuplicates(...args) {
   args.sort((a, b) => {
@@ -56,7 +76,7 @@ function areThereDuplicates(...args) {
   return false;
 }
 
-// One Liner Solution
+// One Liner Solution - IMP
 function areThereDuplicates() {
   return new Set(arguments).size !== arguments.length;
 }

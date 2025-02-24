@@ -13,6 +13,25 @@
 
 // You must do this with constant or O(1) space and O(n) time.
 
+// Easy
+function countUniqueValues(arr) {
+  if (arr.length === 0) return 0; // If the array is empty, return 0
+
+  let uniqueCount = 1; // Start with the first element as unique
+  let i = 1; // Start from the second element
+
+  // Iterate through the array
+  while (i < arr.length) {
+      if (arr[i] !== arr[i - 1]) {
+          uniqueCount++; // Found a new unique value
+      }
+      i++; // Move to the next element
+  }
+
+  console.log(uniqueCount); // Return the count of unique values
+}
+
+// X
 function countUniqueValues(arr) {
   if (arr.length < 2) {
     return arr.length;

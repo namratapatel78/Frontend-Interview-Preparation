@@ -9,5 +9,5 @@ let myFunction = function() {
   }
 };
 
-console.log(myVariable);  // undefined
-myFunction();  // 'myVariable is awesome'
+console.log(myVariable);
+myFunction();

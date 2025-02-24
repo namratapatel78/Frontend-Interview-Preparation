@@ -4,6 +4,8 @@
 
 // without strict mode this will default to Global/Window object
 
+// TODO: Difference in strict and non strict mode?
+
 let bob = function (num, str, x) {
   console.log("bob", num, str, this, x);
 };

@@ -17,3 +17,16 @@ function foo() {
 
 foo();
 console.log(name);
+
+
+// Explanation:
+// Variable Scope:
+
+// In JavaScript, variables declared with var inside a function are scoped to that function. This is called function scope.
+// The variable name declared inside the foo function is not accessible outside the function.
+// Function Execution:
+
+// When foo() is called, the name variable is created inside the function, assigned the value "Namrata", and then destroyed when the function execution ends. The variable name exists only during the execution of foo.
+// Accessing name Outside:
+
+// The console.log(name) statement tries to access name, which is not defined in the outer (global) scope. Hence, a ReferenceError is thrown.

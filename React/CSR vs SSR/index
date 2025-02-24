@@ -24,7 +24,7 @@ CSR - Client side rendering
 
 Advantages:
 1. Comprised of just static files, it can easily be served via just a CDN
-2. Allows us to have navigations wothout full page reload
+2. Allows us to have navigations without full page reload
 3. The fast TTFB allows browsers to immediately start loading assets like fonts, CSS, JavaScript etc.
 
 Disadvantages:
@@ -37,7 +37,7 @@ Disadvantages:
 SSR - Server side rendering
 1. Server prepares the HTML and sends it to the browser. The browser receives the complete HTML file and displays it to the user.
 2. Slow initial loading as it needs to fetch the HTML from server - TTFB is more than CSR
-2. Clients requests the JS -> Afrer hydration app becomes interactive
+2. Clients requests the JS -> After hydration app becomes interactive
 3. Used for better user experience as page reload is not a good user experience
 
 

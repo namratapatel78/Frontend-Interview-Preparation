@@ -1,0 +1,21 @@
+CORS, or Cross-Origin Resource Sharing, is a security feature implemented by browsers to control how resources (like APIs, fonts, or images) are requested from a different domain than the one the web page originated from.
+
+Why CORS Exists
+Web browsers enforce the same-origin policy, which restricts web pages from making requests to a different domain than the one that served the page. This policy protects users from malicious sites trying to access sensitive data from another site. However, many legitimate scenarios require cross-origin requests (for example, fetching data from a third-party API). CORS provides a controlled way to enable these requests.
+
+How CORS Works
+Request with Origin Header:
+When a web page makes a cross-origin request (e.g., via fetch or XMLHttpRequest), the browser automatically adds an Origin header indicating the source of the request.
+
+Server-Side Check:
+The server receiving the request examines the Origin header. If the server is configured to allow requests from that origin, it includes specific CORS headers in its response.
+
+Response Headers:
+
+Access-Control-Allow-Origin: Specifies which origins are permitted. It might allow a specific origin (e.g., https://example.com) or use a wildcard (*) to allow any origin.
+Access-Control-Allow-Methods: Lists the HTTP methods (e.g., GET, POST, PUT) permitted when accessing the resource.
+Access-Control-Allow-Headers: Specifies which HTTP headers can be used during the actual request.
+Access-Control-Allow-Credentials: Indicates whether the browser should include credentials like cookies or HTTP authentication in requests.
+Preflight Requests:
+For requests that aren’t considered “simple” (e.g., using methods like PUT or DELETE or custom headers), the browser first sends an HTTP OPTIONS request—this is known as a preflight request. The preflight checks if the actual request is safe to send by verifying the allowed methods and headers. If the preflight request is approved by the server, the browser proceeds with the actual request.
+

@@ -48,10 +48,10 @@ var title = "Patel";
 
 function getFullName(titleArg) {
   var preText = "Miss";
-  return preText + name + titleArg;
+  return preText + " " + name + " " + titleArg;
 }
 
-getFullName(title);
+console.log(getFullName(title));
 
 // Global execution context
 //   -> 1. Creation
