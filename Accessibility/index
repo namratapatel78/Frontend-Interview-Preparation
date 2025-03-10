@@ -1,0 +1,63 @@
+The Web Content Accessibility Guidelines (WCAG) are a set of international guidelines designed to make web content more accessible to people with disabilities. Here’s a simple breakdown:
+
+1. Perceivable : Users should be able to see and hear all content. This means providing text alternatives for images, making sure videos have captions, and ensuring that content can be resized and is easy to read.
+2. Operable : All users should be able to use the website easily. This includes making sure the site can be navigated using a keyboard, providing enough time to read and use content, and avoiding content that can cause seizures (like flashing lights).
+3. Understandable : The information and the operation of the website should be clear and easy to understand. This involves using simple language, consistent navigation, and providing help or instructions when needed.
+4. Robust : Content should work well with current and future technologies, including assistive technologies like screen readers. This means using proper coding practices so that the site can be accessed by various devices and browsers.
+Overall, WCAG guidelines help ensure that everyone, including people with different abilities, can access and enjoy web content.
+
+
+Success criteria for WCAG 2.0
+
+1. Text alternatives for images and non-text content
+2. Video and Audio Alternatives:
+   - text transcript
+   - audio description
+   - Transcripts are clearly labelled and avialable near the media
+3. Closed captioning for recorded videos with sound:
+   - has visual text representation of the spoken dialogue
+   - is synchronized with the timing of spoken words and usually formatted for viewing alongside video
+4. Audio description for video: audio description or text transcript
+5. Live captions
+6. Info and relationships
+7. Present content in meaningful order
+8. Sensory characteristics: shape, color, size visual position, orientation, sound
+9. Use of color: do not rely only on color, for color blind
+10. Audion control: pause, stop, mute
+11. Maintain color contrast ratio b/w text and backgroud color
+12. Text resize
+13. Avoid using image of text apart from the logo
+14. Keyboard only navigation
+15. Adjustable time limit: user should be able to control
+16. Pause, stop or hide the moving content
+17. Three flashes or below
+18. Bypass repeated blocks of content:
+19. Page titles: Each page of a website should have a unique title
+20. Focus order
+21. Link purpose: The link text should claerly define the purpose of the link
+22. Multiple ways: There should be multiple ways to find pages in a website (e.g. search, site map, breadcrumbs, related pages etc)
+23. Headings and labels must be clear and descriptive
+24. Focus indicator using keyboard
+25. Page language
+26. Language change programmatically
+27. Nothing should be activated because of focus change (e.g. button click action)
+28. No Input change: No changes should occur because of input change (e.g. popup after addng name to the field)
+29. Consistent navigation: links stay in the same order
+30. Consistent identification: Interactive elements that have the same function are identified consistently.
+31. Easy error identification and Provide suggestions to correct error
+32. Clear labels and instructions
+33. Error prevention (e.g. review the list of mf list befor placing a mf order)
+34. Parsing: Make sure code is free of errors
+35. Name, Role, Value: For all the interactive elements, make sure the applicable name, role, state or value is determined programmatically (e.g. menus, checkboxes)
+36. Orientation: User can use both portrait or landscape view
+37. Input
+38. Reflow: Website can be zoomed in without requiring horizontal scrolling and poor experience.
+39. Maintain not text contrast ratio (e.g. button)
+40. Maintain text spacing
+41. Control over content shown on hover or focus
+42. User can turn on or off the keyboard shotcuts
+43. Labels for same actions should be aligned
+    - Correct - "Sign Up Now" vs "Sign Up"
+    - Incorrect - "Order Now" vs "Buy Now"
+44. Keep alternatives for all the actions
+45. Status message should appear in such a way that screen reader users are alerted without loosing focus (e.g. Alert for added to cart)

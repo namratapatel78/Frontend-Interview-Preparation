@@ -1,0 +1,26 @@
+Points
+
+1. Requirements gathering: Identify user journeys, performance expectation and accessibility needs.
+2. Design language system: Design tokens like colors, typography, spacing to maintain consistency across app
+3. Break down components
+4. Component library
+5. Create all possible layouts according to design
+6. Decide folder structure:
+  Features - components, helpers, assets, constants, types, styles
+  Common - api helper, assets, resuable components, styles, error handling, hooks, services(sentry, amplitude), test helpers, redux wrapper
+7. route formats
+8. Separate out stateless and statefull component
+9. Common error handling - error page, report to sentry and analytics
+10. CSS preprocessor - SASS, tailwind
+11. State Management - Context api or React
+12. Unit tests
+13. Performance: Code Splitting & Lazy Loading
+14. Memoization & Optimizations: React.memo, useMemo, and useCallback to prevent unnecessary re-renders.
+15. Add typescript
+16. Linting & Formatting: Eslint and prettier
+17. Hot Module Replacement (HMR)
+18. Monitoring & Analytics: Sentry, Amplitue, GA
+19. Documentation: coding standards, best practices, naming convention
+20. Accessibility
+21. Babel and webpack config
+22. Build in such a way that it can be scalable

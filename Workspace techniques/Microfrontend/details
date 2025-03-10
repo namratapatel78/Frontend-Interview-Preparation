@@ -1,0 +1,16 @@
+To implement a microfrontend in React, you essentially create separate, independently deployable React applications for different features or sections of your website, then use a mechanism like Webpack Module Federation within a "host" application to dynamically load and integrate these microfrontends at runtime, allowing for modular development and flexible deployment.
+key steps include:
+1. setting up the host application
+2. creating individual microfrontend projects
+3. configuring Module Federation in Webpack
+4. managing routing
+5. handling communication between microfrontends.
+
+One of the most effective ways to implement microfrontends in React is by using Webpack 5's Module Federation feature. This allows different applications (microfrontends) to share code dynamically at runtime without the need for complex build-time configurations.
+
+Steps to approach the micro-frontend architecture:
+1. Identify different parts of frontend application that can be divided into smaller, independent parts.
+2. Decide the framework/library for developing micro frontends - we can use different framework/library for each remote app.
+3. Implement the host app to load and manage micro frontends
+4. Decide on strategy to bundle and deploy micro frontends
+5. Implement a testing strategy that ensures that each micro frontends can be tested both in isolation and as part of large application.

@@ -1,0 +1,30 @@
+Major categories of integration
+
+1. Build time integration
+
+  How it works:
+    - Before container app gets loaded in the browser, it gets access to remote app source code
+
+  Pro:
+    - Easy to setup and understand
+
+  Cons:
+    - Container app has to be deployed every time remote app is updated
+
+2. Run time integration
+
+  How it works:
+    - After container app gets loaded in the browser, it gets access to remote app source code
+    - remote app code gets deployed to https://my-app.com/<remote-name>.js
+    - User navigates to my-app.com, container app is loaded
+    - Container app fetches <remote-app>.js and executes it.
+
+  Pro:
+    - Remote apps can be deployed independently at any time
+    - Different versions of remote app can be deployed and container app can decide which one to use
+
+  Cons:
+    - Setup is complicated
+
+
+3. Server integration

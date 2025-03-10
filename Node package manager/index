@@ -1,0 +1,56 @@
+Chat gpt link: https://chatgpt.com/c/67cf0c0a-bbe4-800c-9ca9-e3e338c0102b
+
+NPM vs Yarn vs PNPM
+
+All three—npm, yarn, and pnpm—are package managers for JavaScript, but they have key differences in performance, efficiency, and features.
+
+1. NPM (Node Package Manager)
+Default package manager for Node.js
+Comes bundled with Node.js
+Uses a central node_modules directory, which can lead to duplication
+Slower installations compared to Yarn and PNPM
+Uses a lockfile (package-lock.json) for consistency
+Has security features like npm audit
+Pros:
+✔ Comes pre-installed with Node.js
+✔ Large community and support
+✔ npx allows running packages without installation
+
+Cons:
+❌ Slower than Yarn & PNPM
+❌ Can have performance issues due to duplicate dependencies
+
+2. Yarn
+Introduced by Facebook to fix NPM’s speed & security issues
+Uses a more efficient caching system
+Introduced yarn.lock for deterministic installs
+Supports parallel package installations (faster than npm)
+Plug’n’Play (PnP) mode removes node_modules for improved performance
+Pros:
+✔ Faster than npm due to caching
+✔ Better dependency resolution
+✔ PnP mode reduces disk usage
+
+Cons:
+❌ Heavier memory usage than PNPM
+❌ Can be complex for beginners
+
+3. PNPM (Performant NPM)
+Most efficient in disk space usage
+Uses a global store for packages, avoiding duplication
+Faster than both npm & yarn due to hard links and symlinks
+Creates a pnpm-lock.yaml file for deterministic installs
+Works well with monorepos
+Pros:
+✔ Uses less disk space (no duplicate packages)
+✔ Fastest installation due to symlinking
+✔ Better handling of monorepos
+
+Cons:
+❌ Not as widely adopted as npm/yarn
+❌ Requires some learning to understand symlinking
+
+Which one should you use?
+✅ Use npm if you want the default and simplest solution.
+✅ Use yarn if you need faster installs & better dependency management.
+✅ Use pnpm if you want the most efficient, fast, and disk-friendly solution (especially for monorepos).
