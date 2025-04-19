@@ -1,0 +1,12 @@
+1. Migrate from yarn to pnpm
+2. Change web project architecture - Add error boundary, access usage of Redirect.tsx
+3. Lazy loading and Code splitting in web
+4. Add advance typescript
+5. Write a documentation to increase developer's productivity - git command shortcuts
+6. How to use git effectively
+7. Find out the best IDE
+8. Use same node version for all the 4 projects so that we don't need to change the node version for each project
+9. Separate the auth package as an separate auth library and use it
+
+
+2. Migrate from Webpack to vite

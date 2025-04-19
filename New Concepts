@@ -6,7 +6,56 @@ Context vs Redux
 Portals
 Reconciliation
 Strict type
-Uncontrolled Components
+Uncontrolled Components vs Controlled components
 Pure components - Avoid unnecessary rendering - checkes prev props and prev state in ShouldComponentUpdate and return true and false based on that.
-
 Components - returns true in ShouldComponentUpdate by default
+
+Imperative vs Declarative approach: https://chatgpt.com/c/67ea9866-6f2c-800c-840c-c975618a198d
+
+The imperative and declarative approaches are two programming paradigms that define how you instruct a computer to perform tasks.
+
+Imperative Approach
+How to do it: You explicitly describe each step needed to achieve a task.
+
+Focus: The process (control flow and state changes).
+
+Example: Procedural programming (e.g., C, Java with loops)
+
+Example in JavaScript (Imperative - Using a loop):
+
+js
+Copy
+Edit
+const numbers = [1, 2, 3, 4, 5];
+const doubled = [];
+
+for (let i = 0; i < numbers.length; i++) {
+  doubled.push(numbers[i] * 2);
+}
+
+console.log(doubled); // [2, 4, 6, 8, 10]
+Declarative Approach
+What to do: You describe the desired outcome without explicitly listing steps.
+
+Focus: The result (abstracting the implementation details).
+
+Example: Functional programming (e.g., React, SQL, Python list comprehensions)
+
+Example in JavaScript (Declarative - Using map):
+
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(num => num * 2);
+
+console.log(doubled); // [2, 4, 6, 8, 10]
+Key Differences
+Feature	Imperative	Declarative
+Focus	How to do it	What to do
+Code Style	Step-by-step instructions	Descriptive, high-level
+Examples	Loops, forEach, manual DOM manipulation (e.g., document.createElement)	Functional methods (map, filter, reduce), React JSX, SQL queries
+Maintainability	Harder to maintain, more prone to errors	Easier to read and maintain
+Which One to Use?
+Imperative: When you need fine-grained control (e.g., performance optimizations, low-level system programming).
+
+Declarative: When you want readability, maintainability, and abstraction (e.g., UI development with React, functional programming).
+
+Since you're working on a React project, React itself is declarative—it describes "what the UI should look like" rather than manually manipulating the DOM. Let me know if you want examples related to React! 🚀

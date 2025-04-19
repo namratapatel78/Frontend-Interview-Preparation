@@ -1,5 +1,13 @@
-// Understand the problem
-// Write possible inputs and outputs
-// Break down the problem
-// Solve simple things
-// Look back and refactor
+Problem solving approach:
+- Understand the problem
+- Write possible inputs and outputs
+- Break down the problem
+- Solve simple things
+- Look back and refactor
+
+
+Problem solving patterns:
+1. Frequency counter pattern
+2. Multiple pointers pattern - sum-zero.js
+3. Sliding window pattern - mas-sub-array-sum.js
+4. Divide and Conquer pattern

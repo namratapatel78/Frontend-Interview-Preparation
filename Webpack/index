@@ -1,0 +1,1 @@
+Webpack is a module bundler for JavaScript applications. It takes modules with dependencies and bundles them into static assets that a browser can understand. Webpack is widely used in React applications to optimize performance, handle assets (CSS, images, fonts), and enable features like hot module replacement (HMR).

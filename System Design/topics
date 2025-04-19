@@ -6,7 +6,7 @@
   d. Content Delivery Networks (CDNs) & Caching
     CDN: Serve static assets via CDNs to leverage geographic distribution, reducing latency.
     Caching: HTTP cache headers, and service workers
-      HTTP cache headers: Cache Contro: max-age:300, must-revalidate, Etag and Last Modified
+      HTTP cache headers: Cache Control: max-age:300, must-revalidate, Etag and Last Modified
 
 2. Enhancing Runtime Performance
   a. Efficient Rendering & Repaints

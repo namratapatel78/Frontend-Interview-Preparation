@@ -1,0 +1,1 @@
+Microfrontends are an architectural approach to frontend development where a single web application is constructed from multiple, independently developed and deployed frontend applications. This concept is inspired by microservices, which allows different teams to build and deploy their own pieces of a system independently.

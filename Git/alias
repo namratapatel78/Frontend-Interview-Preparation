@@ -1,0 +1,54 @@
+COMMON USAGE:
+git config --global --replace-all alias.ch checkout
+git config --global --replace-all alias.co commit
+git config --global --replace-all alias.st status
+git config --global --replace-all alias.fe fetch
+
+git config --global --replace-all alias.p push
+git config --global --replace-all alias.fp "push -f"
+
+git config --global --replace-all alias.lg "log --oneline"
+
+git config --global --replace-all alias.rb "rebase"
+git config --global --replace-all alias.rbm "rebase origin/master"
+git config --global --replace-all alias.rbr "rebase origin/release/build"
+git config --global --replace-all alias.rbi "rebase origin/immortal"
+git config --global --replace-all alias.rbc "rebase --continue"
+
+git config --global --replace-all alias.br branch
+git config --global --replace-all alias.df diff
+
+git config --global --replace-all alias.rs "reset --hard"
+git config --global --replace-all alias.rsm "reset --hard origin/master"
+git config --global --replace-all alias.rsr "reset --hard origin/release/build"
+git config --global --replace-all alias.rsi "reset --hard origin/immortal"
+git config --global --replace-all alias.rsb "reset --hard"
+
+Now you can use commands like git co instead of git checkout.
+
+Command to get list of all the alias: git config --get-regexp alias
+
+STEPS to create all the configs in on go using shell script:
+
+1. Open your terminal and create a new shell script file:
+touch set_git_aliases.sh
+
+2. Open the file in a text editor (e.g., nano, vim):
+vim set_git_aliases.sh
+
+3. Add the following lines to the file:
+#!/bin/bash
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.df diff
+git config --global alias.lg "log --oneline --graph --decorate"
+
+4. Save and exit the editor.
+
+5. Make the script executable:
+chmod +x set_git_aliases.sh
+
+6. Run the script:
+./set_git_aliases.sh

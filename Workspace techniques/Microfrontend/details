@@ -14,3 +14,18 @@ Steps to approach the micro-frontend architecture:
 3. Implement the host app to load and manage micro frontends
 4. Decide on strategy to bundle and deploy micro frontends
 5. Implement a testing strategy that ensures that each micro frontends can be tested both in isolation and as part of large application.
+
+
+
+
+In the container application, we use the bootstrap.js file primarily to manage shared dependencies and execute the appropriate code before the main application starts. Here’s a breakdown of why it's essential:
+
+Dependency Management: The bootstrap.js file allows us to import shared dependencies (like faker) that may be required by other parts of our application. This is because it is invoked through an import() function in the index.js, ensuring that necessary dependencies are loaded beforehand.
+
+Executing Code: The bootstrap.js is designed to execute initial setup code or to mount components for the application. Since it can properly import shared modules, this allows the applications to work seamlessly together.
+
+Webpack Integration: When the application starts, webpack encounters a required statement for bootstrap.js. This triggers webpack to fetch not only bootstrap.js but also any additional code needed from other applications (like the products app) before executing the main index.js.
+
+Isolation of Exports: By exporting functions from bootstrap.js (like the mount function), we prevent issues that arise if we were to export from index.js, which uses dynamic imports and could lead to incomplete setups.
+
+Therefore, the use of bootstrap.js facilitates smooth operation and integration of microfrontend architecture by ensuring that all dependencies are loaded and executed in the appropriate sequence.
