@@ -62,3 +62,4 @@ function minSubArrayLen(nums, sum) {
   }
   return minLength === Infinity ? 0 : minLength;
 }
+// minSubArrayLen([2,3,1,2,4,3], 7) // 2 -> because [4,3] is the smallest subarray

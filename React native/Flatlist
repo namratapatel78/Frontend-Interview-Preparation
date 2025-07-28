@@ -1,0 +1,12 @@
+✅ Benefits of FlatList in React Native (Summary):
+High Performance – Renders only visible items (virtualization), great for large lists.
+
+Lazy Loading – Loads items as needed, improving load time.
+
+Built-in Features – Supports pull-to-refresh, pagination, headers/footers, and empty states.
+
+Clean Code – Easier to manage and customize list items.
+
+Smooth UX – Better scrolling and memory management than ScrollView.
+
+Use FlatList when dealing with dynamic or large datasets.

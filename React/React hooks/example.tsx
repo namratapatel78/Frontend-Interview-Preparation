@@ -18,6 +18,22 @@
 // const myRef = useRef(initialValue);
 // // Access the ref: myRef.current
 
+
+// 4. useLayoutEffect
+// Runs synchronously after all DOM mutations, but before the browser paints.
+
+// Like useEffect, but:
+// It blocks the paint until it runs.
+// Runs after the DOM is updated but before the user sees changes.
+
+// 🤔 When to use:
+// Measuring layout (offsetHeight, getBoundingClientRect)
+// Reading or writing to the DOM where timing is critical
+// Avoiding visual glitches before DOM manipulation
+
+// Common Use Cases:Measuring elements, triggering animations, syncing scroll positions
+
+
 // React.memo
 // Purpose: Higher-order component that memoizes the rendered output of a component.
 // Usage: When you have a functional component that renders the same output given the same props, React.memo prevents unnecessary re-renders.

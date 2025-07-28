@@ -22,7 +22,7 @@ function fib (n) {
     }
     return result;
   }
-  
+
 console.log(fib(7));
 
 
@@ -66,3 +66,17 @@ let fib = memo(slowFibo);
 
 console.log(fib(5));
 
+
+const fibo2 = (n) => {
+  let str = '';
+  let a = 0;
+  let b = 1;
+  for (let i=0; i<n; i++) {
+     const sum = a + b;
+     str = str + ' '  + b;
+     a = b;
+     b = sum;
+  }
+  return str;
+}
+console.log(fibo2(5));

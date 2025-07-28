@@ -1,0 +1,34 @@
+Rendering Performance
+  -> SSR
+  -> Application cache - Local storage, Cookies, Session storage
+  -> FP, FCP, LCP, TTI, CLS
+  -> Skeleton loaders
+  -> Handle success, errors and loading state
+  -> Mobile friendly
+  -> Preload JS when needed - Lazy loading
+  -> Import only what you need
+  -> Defer non critical script
+  -> Virtualization
+  -> Rate limit - Throttle / Debounce
+  -> Tree Shaking - Eleminate dead code
+    Example steps in a CRA or Webpack-based project:
+
+    - Use ES6 module imports/exports throughout your code.
+    - Set "sideEffects": false in package.json.
+    - Import only what you use from external libraries (no blanket imports).
+    - Run npm run build for a production bundle.
+    - (Optional) Run a bundle analyzer to confirm tree shaking results.
+
+    By following these guidelines, you reduce bundle size and improve app performance by ensuring only the code actually needed by your app is shipped to users
+  -> CSS Optimizations - https://www.perplexity.ai/search/rendering-is-where-users-diffe-dNNvgWOfQgqdQrQ9.TZSMg
+    - Layout thrashing occurs when the browser is forced to repeatedly recalculate styles and layouts due to JavaScript that reads from and writes to the DOM in quick succession.
+    Batch DOM reads separately from writes to avoid unnecessary layout recalculations.
+    - Minify CSS and remove unused styles (e.g., with PurgeCSS) to reduce bundle size.
+    - Prefer CSS transitions and keyframe animations over JavaScript-based animations.
+    - Use flat, single-class selectors (like BEM) for faster style resolution and maintainable CSS.
+    - Use tools like Chrome DevTools, Lighthouse, and Stylelint to audit and monitor CSS performance.
+    Animate only transform and opacity to leverage GPU acceleration and avoid layout or paint costs.
+    Inline CSS (CSS-in-JS) helps with critical styles and faster first paint, especially in SSR setups.
+    Avoid deeply nested selectors and keep class names short, scoped, and meaningful.
+    Use will-change to hint the browser about upcoming animations for performance.
+    Apply contain to isolate layout or paint changes within components.

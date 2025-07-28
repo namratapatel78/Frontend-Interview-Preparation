@@ -28,7 +28,9 @@ const mergeSortedArrays = (arr1, arr2) => {
   }
   return res;
 };
-
+//           i
 const one = [1, 3, 4, 5, 9, 10, 11, 12], two = [2, 4, 6, 8, 10, 11];
+//                                              j
+
 const result = mergeSortedArrays(one, two);
 console.log(result);

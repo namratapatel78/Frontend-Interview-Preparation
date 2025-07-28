@@ -1,0 +1,51 @@
+https://www.perplexity.ai/search/security-is-a-critical-part-of-i4E2pIOaRzW_ibTeO7hIaQ
+
+Security in modern frontend systems like React apps is a multilayered challenge that requires coordinated measures across the client (browser), browser environment, and server.
+
+Example: Secure React Login Flow
+On login, server sets sessionid cookie with HttpOnly, Secure, SameSite=Strict.
+
+Client (React) does not store this token anywhere in JS—browser attaches it automatically.
+
+All internal fetch/axios calls use relative URLs and expect 401/403 errors to trigger logout UI—but never display backend error text.
+
+All API endpoints on the server check session and permissions.
+
+Server sends CSP header; React components do not use dangerouslySetInnerHTML except with libraries like DOMPurify.
+
+Dependency checking is automated in CI, and any new dependency is manually reviewed for risk.
+
+Summary Table
+
+Threat	React App (Client) Example	Browser Role	Server Actions & Headers
+XSS Prevention	Sanitize & avoid raw HTML, DOMPurify	Enforce CSP, block inline scripts	Set CSP header, encode outputs
+Rate Limiting	Throttle UI events	None	Enforce IP/user rate limiting
+CORS	Handle failed requests	Block by default	Allow only trusted origins
+CSRF	Send/receive CSRF token	Enforce SameSite cookies	Generate & check tokens, stand cookie flags
+Auth/Authorization	Never trust frontend only, no sensitive storage	Enforce cookie security	Check credentials/permissions per API call
+Secure Storage	Avoid localStorage/sessionStorage for tokens	Block JS access by HttpOnly cookies	Set cookies with HttpOnly, Secure
+CSP	Avoid inline scripts/styles	Enforce script/style origin	Set CSP, limit allowed resources
+HTTPS	Use https endpoints, no mixed content	Warn/block mixed content	Redirect to https, enable HSTS
+Error Handling	Show safe, user-centric errors	None	Log internal, show non-sensitive error to user
+Dependency Auditing	Use npm audit/yarn audit in CI	None	Automate security scanning in CI/CD
+This coordinated approach, especially when building React apps, is essential for robust security.
+
+
+
+-> CSP
+  - Restrict which sources can execute JavaScript on the page
+  - CSP headers from the server further reduce risk by restricting script execution at the browser level
+  - Content Security Policy (CSP) headers are highly effective in blocking inline scripts and reducing XSS risks because they give the browser precise instructions about what sources of executable code are permitted on a web page.
+  - With CSP in Place:
+    When a site sends a strict CSP header—specifically with script-src that excludes 'unsafe-inline'—the browser will by default block any inline JavaScript:
+
+    <script>alert("Hacked!")</script> will not execute.
+
+    Inline event handlers in HTML (such as <button onclick="someFunction()">) will not run.
+
+    JavaScript URLs and some dangerous DOM APIs like eval() can be disallowed.
+
+    Only scripts from explicitly whitelisted sources (e.g., your domain or a specific CDN) are allowed
+
+
+

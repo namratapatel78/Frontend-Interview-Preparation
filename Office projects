@@ -7,6 +7,16 @@
 7. Find out the best IDE
 8. Use same node version for all the 4 projects so that we don't need to change the node version for each project
 9. Separate the auth package as an separate auth library and use it
+10. Code push appcenter
+11. Websocket
+12. HMR is not working in web
 
 
 2. Migrate from Webpack to vite
+
+
+Liveview is pretty interesting for pet projects.
+Go to Conderences
+Follow blogs - e.g. netflix
+Start writing blogs
+Pick a new topic and present in tech talk

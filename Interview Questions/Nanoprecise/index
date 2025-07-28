@@ -1,0 +1,14 @@
+1. Microfrontend
+2. Why not use PWA instead of react native
+3. How do you do load testing?
+For example: Script to load the web page for 10 Lakh + users
+4. Why use tailwind over css?
+5. CSR vs SSR. Which one will load faster and whose performace will be better
+6. React vs Next.js which one to choose. We can achieve SSR in react as well. - Research around that. Are there any limitation on using React with SSR?
+7. How do you handle Security in React application - Add token with each API call, CORS, Avoid memory leak.
+8. How can two different domain use same cookie - Using 3rd party cookies - need to enable it in browser
+9. How do you do code review? Is it automated?
+10. Do you use LLM's for automating manual work?
+11. currying fucntion, Find first and last element from the array, Check anagram.
+12. Where do you store your token?
+13. Do you compress JS and CSS files?

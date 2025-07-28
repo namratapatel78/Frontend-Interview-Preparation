@@ -1,0 +1,24 @@
+https://www.linkedin.com/jobs/view/senior-frontend-developer-principal-engineer-web-mobile-at-nanoprecise-sci-corp-4231147140/?originalSubdomain=in
+
+
+
+https://chatgpt.com/c/68447788-bb24-800c-98a2-5e1245893f99
+https://chatgpt.com/c/68447a15-9140-800c-bb10-1c3efa9cce42
+https://chatgpt.com/c/6845d309-0ee8-800c-bc3a-f26d3709ff7c
+
+1. Virtual DOM vs React Fiber
+
+React Fiber is the reconciliation and rendering engine introduced in React 16.
+It’s a complete rewrite of React's core algorithm with a focus on performance, flexibility, and user experience.
+
+Fiber enables React to break rendering work into units and pause, resume, or abort work as needed — making it suitable for building responsive UIs.
+
+Unlike the old call-stack recursion, Fiber uses a linked tree to enable pausing/resuming.
+
+
+2. useImperativeHandle and useLayoutEffect
+3. React Server Components
+
+4. Reason for rerenders in React: https://chatgpt.com/c/68767ec8-3960-800c-aa5c-ac0bd41b260b
+
+5.

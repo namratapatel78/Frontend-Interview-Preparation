@@ -1,0 +1,64 @@
+"what does the console.log show" evaluating react, typescript knowledge
+Various questions related to the frameworks they are using and Javascript
+Why do you want to work here?
+
+
+
+
+1. Benefits of using generics
+Type safety without repeating types
+Reusability of components and hooks
+Flexibility for varied data shapes
+Autocompletion and error detection in the IDE
+
+Generics let you write a component or function where the type is a placeholder, to be provided when the component/function is used.
+
+function identity<T>(value: T): T {
+  return value;
+}
+
+identity<number>(5);      // Returns 5, type is number
+identity<string>("hello"); // Returns "hello", type is string
+
+In the context of React, generics are commonly used in
+Custom hooks
+Reusable components
+Utility functions
+Context providers
+
+
+2. type
+type Status = "pending" | "completed";
+
+interface Task {
+  id: number;
+  title: string;
+  description?: string;
+  status: Status;
+}
+
+
+
+Points:
+1. useReducer
+2. custom hook
+3. Infinite scroll with Intersection Observer
+4. Types
+5. React fiber
+6. useContext
+7. useMemo, React.memo, useCallback
+8. fetch, axios
+
+
+
+Talk out loud — explain your thinking, even when stuck.
+
+Ask clarifying questions — don’t assume requirements.
+
+Write small, testable components
+
+Use types proactively — define interfaces/types early.
+
+Write clean code — avoid duplication, extract logic.
+
+Error handling — always handle edge cases.

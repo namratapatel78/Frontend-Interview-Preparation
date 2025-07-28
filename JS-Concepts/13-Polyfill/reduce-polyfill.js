@@ -6,8 +6,8 @@ let result = numArray.reduce((acc, cur) => acc + cur);
 console.log(result);
 
 // reduce polyfill
-Array.prototype.customReduce = function (callback) {
-  let result = 0;
+Array.prototype.customReduce = function (callback, initialValue) {
+  let result = initialValue;
   for (let num of this) {
     result = callback(result, num);
   }

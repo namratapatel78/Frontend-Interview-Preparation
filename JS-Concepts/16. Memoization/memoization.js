@@ -1,5 +1,6 @@
 // https://www.freecodecamp.org/news/memoization-in-javascript-and-react/
 
+// 1. Using object - stores key as string
 const memoize = (fn) => {
   const cache = {};
   return (...args) => {
@@ -12,6 +13,20 @@ const memoize = (fn) => {
     return res;
   };
 };
+
+// Using Map - map stores key as it is - number, string, object, etc.
+export default function memoize(func) {
+  const map = new Map();
+  return function (a) {
+    console.log(this?.age);
+    if (map.has(a)) {
+      return map.get(a);
+    }
+    const result = func.call(this, a);
+    map.set(a, result);
+    return result;
+  };
+}
 
 const multiplyBy10 = (num) => {
   return num * 10;

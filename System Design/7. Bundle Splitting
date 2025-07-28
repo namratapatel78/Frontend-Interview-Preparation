@@ -1,0 +1,5 @@
+https://www.perplexity.ai/search/bundle-splitting-and-lazy-load-0GCSuWLzTSWu15299_GxcA
+
+Route-based code splitting with React Router is a common pattern—each route loads its associated bundle when navigated to, so /profile or /feed only fetches their code when needed.
+
+Component-based code splitting

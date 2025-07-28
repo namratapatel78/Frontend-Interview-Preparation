@@ -10,3 +10,6 @@ Object.keys() // O(n)
 Object.values() // O(n)
 Object.entries() // O(n)
 Object.hasOwnProperty() // O(1)
+
+
+// https://chatgpt.com/c/68222f42-8348-800c-8b6a-43d945c518db

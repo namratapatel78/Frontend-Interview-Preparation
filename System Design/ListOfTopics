@@ -1,0 +1,21 @@
+Facebook
+
+RADIO - Requirements, High Level Architecture, Data flow, Interface, Optimization/Performance
+
+  Requirements - Functional and Non Functional
+    Functional
+      Must have
+      - Post feed
+      - Post support text, image and videos
+      - Infinite scroll
+      - Add, delete or edit post
+      - Like or comment on post
+      - Basic user profiles
+      Nice to have
+      - Search
+      - Internationalization
+    Non Functional
+      - Performance
+      - Mobile friendly
+      - Accessibility
+      - Offline support

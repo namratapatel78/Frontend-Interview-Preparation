@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script src="./index.js" type="module"></script>
+    <!-- <script src="./poll-widget.js" type="module"></script> -->
+    <script>
+      class PollWidget {
+        constructor({ containerId, question, options, onVote }) {
+          const container = document.getElementById(containerId);
+          if (!container) throw new Error("Container not found");
+
+          const state = { voted: false, selected: null };
+
+          const pollHTML = `
+      <div style="border:1px solid #ccc;padding:16px;border-radius:8px;font-family:sans-serif;">
+        <h3>${question}</h3>
+        <form id="poll-form">
+          ${options
+            .map(
+              (opt, i) => `
+            <label style="display:block;margin:8px 0;">
+              <input type="radio" name="poll-option" value="${opt}" required /> ${opt}
+            </label>
+          `
+            )
+            .join("")}
+          <button type="submit" style="margin-top:12px;padding:6px 12px;">Vote</button>
+        </form>
+        <div id="poll-result" style="display:none;margin-top:16px;color:green;"></div>
+      </div>
+    `;
+
+          container.innerHTML = pollHTML;
+
+          const form = container.querySelector("#poll-form");
+          const resultDiv = container.querySelector("#poll-result");
+
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const selected = form.elements["poll-option"].value;
+            state.voted = true;
+            state.selected = selected;
+            form.style.display = "none";
+            resultDiv.style.display = "block";
+            resultDiv.textContent = `Thank you for voting: ${selected}`;
+            if (typeof onVote === "function") onVote(selected);
+          });
+        }
+      }
+
+      new PollWidget({
+        containerId: "app",
+        question: "What's your favorite programming language?",
+        options: ["JavaScript", "Python", "Go", "Rust"],
+        onVote: (selected) => {
+          console.log("Voted:", selected);
+          // Optionally send to API
+        },
+      });
+    </script>
+  </body>
+</html>

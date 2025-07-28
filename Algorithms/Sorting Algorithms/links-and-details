@@ -1,0 +1,5 @@
+https://www.toptal.com/developers/sorting-algorithms
+
+Graph: https://www.freecodecamp.org/news/big-o-cheat-sheet-time-complexity-chart/
+
+Bubble sort, Selection sort and Insertion sort does not scale well, it will take more time for large number of items.

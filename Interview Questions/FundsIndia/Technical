@@ -1,0 +1,98 @@
+1. How to release app faster without doing full or OTA release. What tools can be used to release quick bug fix?
+2. How will you implement stock list page with stock values coming from the websocket? What will be your approach to build stock list page and stock details page of AngelOne app?
+3. How will you change the bundle of the app. - CDN?
+
+
+Answers: https://chatgpt.com/c/680a7509-c0b8-800c-a29f-f8d52c166587
+
+
+1. How to release app faster without doing full or OTA release? What tools can be used to release quick bug fix?
+To release an app faster without going through a full app store review process, OTA (Over-The-Air) updates are the go-to solution. However, if you're looking to avoid even that in certain situations (e.g., internal testing), here are strategies:
+
+✅ Options for Fast Bug Fixes:
+CodePush (via App Center):
+
+Integrates with React Native.
+
+Allows you to push JS bundle and asset updates instantly to users without going through the app store.
+
+Great for small bug fixes or UI changes.
+
+Firebase Remote Config:
+
+Can be used to toggle features or change behavior based on config values.
+
+Useful when the issue can be fixed by changing logic paths without touching code.
+
+Feature Flags (via LaunchDarkly or ConfigCat):
+
+Toggle broken features off while you work on a fix.
+
+Combined with CodePush or remote config, this provides a powerful dynamic update capability.
+
+⚠️ Note:
+OTA updates cannot be used to change native modules, update dependencies involving native code, or fix platform-specific crashes—those still need a full release.
+
+2. How will you implement stock list page with stock values coming from the websocket? What will be your approach to build stock list page and stock details page of AngelOne app?
+🔁 Stock List Page:
+Data Source Setup:
+
+Establish a WebSocket connection to receive real-time stock updates.
+
+Use a state management solution like Zustand, Redux, or Jotai to store stock data globally.
+
+Rendering Efficiently:
+
+Use FlatList with keyExtractor and extraData to handle updates efficiently.
+
+Avoid unnecessary re-renders using React.memo and useCallback.
+
+Optimizations:
+
+Debounce updates (using lodash.debounce) or batch WebSocket messages for performance.
+
+Throttle UI updates to avoid frame drops.
+
+📄 Stock Detail Page:
+Navigation:
+
+Navigate with stockId or symbol as param.
+
+Subscribe to individual stock updates based on that param (via WebSocket).
+
+Display Details:
+
+Show charts, historical data (fetched via REST), and real-time price (from WebSocket).
+
+Modularize components: e.g., PriceTicker, OrderBook, ChartPanel.
+
+Error Handling:
+
+Show fallback UI when WebSocket disconnects or data fails to load.
+
+3. How will you change the bundle of the app?
+Changing the app bundle means changing what is packaged and shipped with the app.
+
+🛠️ Methods:
+For OTA changes (JS bundle):
+
+Use CodePush to push updated JS bundle.
+
+Run appcenter codepush release-react -a <owner>/<app> -d <env>.
+
+For Native Code Changes (Full Bundle Change):
+
+You must rebuild the app using:
+
+react-native run-android / run-ios for dev builds.
+
+cd android && ./gradlew assembleRelease or use Xcode for production builds.
+
+This generates a new .apk / .ipa with the updated native bundle.
+
+For Flavors or Environments:
+
+Use Build Variants (Android) or Schemes (iOS).
+
+Configure different env.js files or .env files with react-native-config to manage multiple builds.
+

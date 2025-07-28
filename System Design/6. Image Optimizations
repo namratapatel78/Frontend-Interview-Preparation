@@ -1,0 +1,22 @@
+https://www.perplexity.ai/search/image-optimization-don-t-just-PEPDUhvDT.WQDSXjMn.NFA
+
+-> Don't just serve original images. Use a microservice or cloud provider to compress and resize images on the fly. Always pull pictures at the exact size needed for the UI. This avoids wasting bytes on oversized assets.
+
+The service performs on-the-fly transformations, such as:
+  - Resizing the image to requested dimensions.
+  - Compressing the image to reduce file size while balancing quality.
+  - Converting file format (e.g., JPEG to WebP or AVIF) based on request or detected client support.
+  - Stripping unnecessary metadata to further shrink the file.
+
+To do:
+  - Use srcSet/sizes and/or <picture> for responsive, modern images.
+  - Image URLs point to a service that resizes/compresses images on-the-fly based on query parameters.
+  - The browser or React app computes and requests exactly the image dimensions needed for each UI situation, ensuring no oversized assets are downloaded
+  - On a device with a high pixel density, the browser may prefer a 2x image (e.g., 640px wide for a 320px display area).
+
+To find the required dimensions and format of an image for a specific device and UI layout in a React app, you need to:
+- Dynamically determine how large the image should appear in your layout (based on container, device, and pixel ratio).
+- Optionally, check browser support for image formats (e.g., WebP, AVIF).
+
+
+-> Lazy loading (loading="lazy") ensures images just outside the initial viewport aren’t downloaded until they’re needed,

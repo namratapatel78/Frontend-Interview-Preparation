@@ -18,6 +18,9 @@ Array.sort() // By default, the sort() function sorts values as strings.
 var numbers = [6, 10, 100, 50, 3];
 numbers.sort()
 
+// ⚠️ Also, don’t forget to sort numerically:
+// Use: nums.sort((a, b) => a - b)
+// Without this, numbers are sorted as strings.
 numbers.sort(function (a, b) {
   return a-b
 })

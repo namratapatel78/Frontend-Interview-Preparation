@@ -1,0 +1,118 @@
+// Round 1
+
+// SECTION 1
+// 1. How to handle user load in web application
+// 2. 3000 users are expected to use the application. 5 piece of text will be fetched per workday. 1 piece of text is 5kb data. The data is fetched 10 times in a workday. How many servers are required to handle the load? How much CPU and RAM is required? You can add assumptions
+
+
+// SECTION 2
+// 1. What is React Context API and why it is required
+// 2. What is Suspense
+// 3. Difference b/w class components and functional components
+// 4. Explain what React Router and it's purpose
+
+
+// SECTION 3
+/*
+A social media site you are working on is looking to add a real-time notification system to display new user comments.
+
+The desired functionality for this system is:
+- When the page loads, display the first 5 comments.
+- Automatically check for new comments every 10 seconds and display them without refreshing the page.
+- Highlight new comments with a different background color for the first 10 seconds after they are added.
+
+You can use this endpoint to fetch comments for testing: https://dummyjson.com/comments?limit=5. Each comment has the following structure:
+{
+  "comments": [
+    {
+      "id": 1,
+      "body": "You have a new follower!",
+    }
+  ]
+}
+
+To simulate new comments, use the skip parameter by incrementing the value passed to it.
+*/
+
+const getData = () => {
+  fetch('https://dummyjson.com/comments?limit=5')
+  .then(res => res.json())
+  .then(response => console.log(response.comments))
+}
+
+const list = getData();
+
+const root = document.getElementById('root');
+console.log(root)
+const element = document.createElement('div');
+
+console.log(element);
+// for () {
+
+// }
+
+// ------------------------------------------------------------------
+
+// Round 2
+
+// Create a debounce function
+// Closure
+// Hoisting - var, let, const
+// generator function yield ??
+// Unit test for react hook
+// Why we can't write hooks inside if condition
+// How does React manages hooks internally
+// Code spliting and bundling
+// Typescript - difference b/w types and interface
+// Security
+// OOPS concept - Encapsulation
+//  Interfaces – Declaration Merging
+interface A {
+  key: '1',
+}
+interface A {
+  value: 'John',
+}
+
+// ❌ Type Aliases – No Redeclaration Allowed
+type B = {
+  key: '1',
+}
+type B = {
+  value: 'John',
+}
+
+
+let person1: any = {
+  name: 'John',
+}
+let person2: unknown = {
+  name: 'John',
+}
+console.log(person1.name); // ✅ No error (but unsafe)
+console.log(person2.name); // ❌ Error: Object is of type 'unknown'
+
+// Output question
+console.log(1); // 1. synchronous code
+
+setTimeout(() => {
+  console.log(2);  // 2. The callback here is pushed to the macrotask queue and will run after the current call stack and all microtasks complete
+}, 0);
+
+Promise.resolve()
+  .then(() => { // 3. This .then callback is a microtask. It will be executed after the current synchronous code.
+    console.log(3);
+    Promise.resolve(4)
+      .then((data) => { // 8. schedules another microtask, which logs 4
+        console.log(data);
+      });
+  });
+
+async function asyncFun() {
+  console.log(5); // 4. runs synchronously inside the function call. Prints 5
+  await Promise.resolve(); // 5. pauses the async function here, yielding execution back to the event loop.
+  console.log(6); // 6.scheduled as a microtask.
+}
+asyncFun();
+
+console.log(7); // 7. synchronous code

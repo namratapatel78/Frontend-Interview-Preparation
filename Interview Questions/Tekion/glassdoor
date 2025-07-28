@@ -1,12 +1,64 @@
+Latest questions:
+Write a Custom hook in react
+Memoize function in js
+Questions based on clouser and react
+HTML, CSS, JS, Polyfills, closures 2. Currying implementation 3. Machine coding round with there interview panel(debounce, filter polyfil) 4. I was asked in-depth questions about projects, optimization of build, webpack core
+js, react, redux, bundlers
+local storage, session storage
+How do you create your own promise
+Javascript Basics( went deep into the basics like bind ,classes , prototypes , polyfills for Promise)
+Polyfill for Array.reduce 2. Output based questions in JS using setTimeout and Promise.resolve 3. Event Loop, micro task and macro task theoritical questions 4. Deep dive into the the work you mentioned in your CV.
+ React program for stopwatch 2, Event bubbling and event capturing 3. Difference between web workers and service workers 4. Difference between Promise and async-await
+Write is debounce and throttle.
+
+
+
+Coding question :: https://leetcode.com/problems/product-of-array-except-self/
+Binary search question
+
+
+UI Building:
+Create a Todo app in React
+Design an E-commerce Checkout Cart. 2. Build a Timer with Start,Stop,Continue and Reset. 3. Polyfills
+
+
+
+Given an array consisting of integers -1, 1, 0 and your target is to print all subarrays having sum 0.
+They had 3 rounds: 1 -> BarRaiser: DSA 2 -> JS/ReactJS + one HTML/CSS Exercise 3 -> LLD 4 -> HLD and covered many concepts like performance, security, microfrontend
+ReactJS -> places 9 cards and change the color on click of the each card JS -> prototypes, polyfills HTML/CSS Exercise -> create a sudoku type structure Thoroughly practise high level design with all key concepts of react in detail
+Asked to implement Promise related functions
+React application based on consuming some open APIs
+Implement Polyfill for some inbuilt JS questions
+design LLD for "Google Sheet" within 40minutes
+1. find the largest palindrome in the string. 2. design book my show app for movie ticker booking.
+
+
+
+Given an array of api's, make api calls synchronously one after another each. Once all completed, execute a callback. Similar to Promise.all but just that all promises has to be resolved synchronously.
+Merge two sorted linked list
+There is a sorted integer array containing +ve and -ve numbers, you need to store the square of numbers in a sorted way
+smallest palindrome substring in String
+Asked to design JS event loop where async event will take priority over main thread.
+What is inorder traversal? What is postorder traversal?
+1st puzzle: 8 balls are there, out of which only one has a different weight; what are the minimum moves to find it?
+Bfs
+Greedy
+Find the maximum product path in a 2D Array
+a) Detecting cycle in a linked list b) Reversing Linked list in groups of k Question on OS like scheduling , Dining Philosophers etc. Graph question of hopping
+Heapify implement ation and walk through the process
+
+
+
+
 1. Write a polyfill for promise all.
 2. Reverse Linked List, Delete Node from BST
 3. Basics of Javascript
-4. project using React, JavaScript5. What is your experience with React? Explain a front end project and the choices you made.
-5. Given an array of api's, make api calls synchronously one after another each. Once all completed, execute a callback. Similar to Promise.all but just that all promises has to be resolved synchronously.
+4. project using React, JavaScript. What is your experience with React? Explain a front end project and the choices you made.
+5. Given an array of api's, make api calls synchronously one after another each. Once all completed, execute a callback. Similar to Promise.all but just that all promises has to be resolved synchronously. - https://chatgpt.com/c/68222aef-fafc-800c-aa78-6d2ad3fa4d6e
 6. dsa question
 7. js react redux
-8. faltering a object using recursion
-9. How javascript works, like the execution context and other theoretical questions like how async is handled and executed. 
+8. flattening an object using recursion - ?
+9. How javascript works, like the execution context and other theoretical questions like how async is handled and executed.
 10. Question about es6 array methods
 11. https://akash-kumar916.medium.com/tekion-corp-interview-experience-offcampus-2bc63f1267c5
 12. https://leetcode.com/discuss/interview-experience/1709335/Tekion-or-Associate-Software-Engineer-Frontend-or-Jan-2022-or-Selected
@@ -24,4 +76,5 @@
 
 
 
-// 2nd round
+// 3rd round
+Third round Managerial round 1. What acccording to you is an ideal team? 2. What is the most challenging task you faced in your work experience and how did you solve it? Any many more questions around behaviour.

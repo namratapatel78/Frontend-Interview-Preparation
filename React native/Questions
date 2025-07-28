@@ -1,0 +1,15 @@
+1. How do you style components in React Native?
+Styles are applied using a JavaScript object or StyleSheet.create() and are similar to CSS, but with camelCase properties (e.g., backgroundColor, fontSize).
+
+2. Why is SafeAreaView used in React Native?
+SafeAreaView is a wrapper component that ensures your content does not overlap with device UI elements, such as:
+Notches (on iPhones with Face ID)
+Status bars (top area with time, battery)
+Home indicators (on newer phones without a physical button)
+
+3. Give a short description on the difference b/w old and new architecture.
+Old Architecture (Bridge-based):
+Uses an asynchronous bridge to communicate between the JavaScript thread and native modules. Data is serialized (usually as JSON) and passed back and forth, causing performance bottlenecks, especially in animations and heavy interactions.
+
+New Architecture (Fabric + TurboModules + JSI):
+Replaces the bridge with the JavaScript Interface (JSI) for direct, synchronous communication between JavaScript and native code. It introduces Fabric, a new renderer for more efficient UI updates, and TurboModules, which lazily load native modules for better startup and runtime performance. This results in faster, smoother apps with improved concurrency support.

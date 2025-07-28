@@ -1,0 +1,265 @@
+https://chatgpt.com/c/68691f85-8ddc-800c-a14e-5aaf420732c8
+
+Here’s a complete guide to the most important problem-solving patterns you’ll use when working with arrays, strings, and objects in coding interviews. Mastering these will help you solve 80–90% of LeetCode-style questions effectively.
+
+🧠 1. Two Pointers
+Used for: Sorted arrays/strings, searching pairs/substrings, removing duplicates, reversing.
+
+✅ Patterns:
+Start and end pointer moving inward (left, right)
+
+Slow and fast pointers
+
+✅ Examples:
+Reverse string/array
+
+Is palindrome
+
+Move zeros
+
+Container with most water
+
+Remove duplicates from sorted array
+
+js
+Copy
+Edit
+let left = 0, right = arr.length - 1;
+while (left < right) {
+  // compare arr[left] and arr[right], move pointers
+}
+🔁 2. Sliding Window
+Used for: Subarray/substring problems with window size or dynamic window.
+
+✅ Types:
+Fixed window size
+
+Variable window size (expand/shrink)
+
+✅ Examples:
+Maximum sum subarray of size k
+
+Longest substring without repeating characters
+
+Minimum window substring
+
+js
+Copy
+Edit
+let start = 0;
+for (let end = 0; end < s.length; end++) {
+    // expand window
+    while (window condition not met) {
+        // shrink window
+        start++;
+    }
+}
+🔄 3. Prefix Sum / Cumulative Sum
+Used for: Range sums, subarray sum, finding subarrays with specific sum.
+
+✅ Examples:
+Subarray sum equals k
+
+Range sum queries
+
+Number of subarrays with sum divisible by k
+
+js
+Copy
+Edit
+let prefix = [0];
+for (let i = 0; i < arr.length; i++) {
+  prefix[i+1] = prefix[i] + arr[i];
+}
+🗃️ 4. Hashing (Map / Set)
+Used for: Fast lookups, frequency counting, avoiding duplicates.
+
+✅ Examples:
+Two sum
+
+Anagrams
+
+Longest substring without repeating characters
+
+Grouping duplicates
+
+js
+Copy
+Edit
+const map = new Map();
+for (let num of nums) {
+  map.set(num, (map.get(num) || 0) + 1);
+}
+🧩 5. Frequency Counter
+Used for: Comparing elements in arrays or strings by frequency.
+
+✅ Examples:
+Valid anagram
+
+Same frequency of digits
+
+Character count match
+
+js
+Copy
+Edit
+const freq1 = {}, freq2 = {};
+for (let ch of str1) freq1[ch] = (freq1[ch] || 0) + 1;
+for (let ch of str2) freq2[ch] = (freq2[ch] || 0) + 1;
+🧱 6. Stack
+Used for: Balanced brackets, next greater element, monotonic stack.
+
+✅ Examples:
+Valid parentheses
+
+Daily temperatures
+
+Remove all adjacent duplicates
+
+Decode string
+
+js
+Copy
+Edit
+const stack = [];
+for (let ch of s) {
+  // push or pop based on condition
+}
+🔍 7. Binary Search
+Used for: Sorted arrays, minimizing/maximizing values, searching efficiently.
+
+✅ Examples:
+Search in sorted array
+
+Find first/last occurrence
+
+Minimum in rotated array
+
+Binary search on answer
+
+js
+Copy
+Edit
+let low = 0, high = arr.length - 1;
+while (low <= high) {
+  let mid = Math.floor((low + high) / 2);
+  // adjust low or high based on condition
+}
+🔗 8. Two Sum / K-Sum Pattern
+Used for: Finding pairs or triplets summing to target.
+
+✅ Examples:
+Two sum
+
+Three sum
+
+Four sum
+
+js
+Copy
+Edit
+// Two Sum using Hash Map
+const map = new Map();
+for (let i = 0; i < nums.length; i++) {
+  const diff = target - nums[i];
+  if (map.has(diff)) return [map.get(diff), i];
+  map.set(nums[i], i);
+}
+🧮 9. Backtracking (DFS)
+Used for: All combinations, permutations, recursive exploration.
+
+✅ Examples:
+Generate parentheses
+
+Subsets
+
+Permutations
+
+Palindrome partitioning
+
+js
+Copy
+Edit
+function backtrack(path, options) {
+  if (goal) result.push(path);
+  for (let i = 0; i < options.length; i++) {
+    backtrack(path + options[i], rest);
+  }
+}
+🔁 10. Greedy
+Used for: Making optimal local choices leading to global solution.
+
+✅ Examples:
+Jump game
+
+Merge intervals
+
+Gas station
+
+Meeting rooms
+
+js
+Copy
+Edit
+intervals.sort((a, b) => a[0] - b[0]);
+// make greedy choices
+🧠 11. Bit Manipulation
+Used for: XOR tricks, toggling bits, checking unique numbers.
+
+✅ Examples:
+Single number (XOR)
+
+Find missing number
+
+Count bits
+
+js
+Copy
+Edit
+let res = 0;
+for (let num of nums) res ^= num;
+🗂️ 12. Sorting + Custom Logic
+Used for: When sorted order simplifies logic.
+
+✅ Examples:
+Merge intervals
+
+Largest number
+
+Group anagrams
+
+Sort characters by frequency
+
+js
+Copy
+Edit
+arr.sort((a, b) => b - a);
+🧮 13. Math Tricks
+Used for: Sum formulas, modulo tricks, combinatorics.
+
+✅ Examples:
+Missing number (sum of 1 to n)
+
+Power of 2
+
+Integer reverse/palindrome
+
+Count digits
+
+js
+Copy
+Edit
+const expectedSum = (n * (n + 1)) / 2;
+✅ Final Tip:
+When given a problem, always think:
+
+Can I use a Set/Map to store data?
+
+Can I use sliding window for substrings/subarrays?
+
+Is it sorted? → Try two pointers or binary search
+
+Do I need all combinations? → Try backtracking
+
+Need to optimize/minimize/maximize? → Try greedy or binary search on answer
+

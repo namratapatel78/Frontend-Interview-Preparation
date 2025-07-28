@@ -1,0 +1,19 @@
+https://www.perplexity.ai/search/how-to-improve-network-perform-2tw5ASXETtyHyH2kfIckjA
+
+Batch requests are a proven technique to improve network performance by combining multiple client operations into a single network request. This reduces the inefficiencies and overhead associated with sending several separate requests and receiving multiple responses.
+
+A batch request containing multiple data fetches or updates is parsed by the server, which executes each operation (possibly in parallel), collects the output, and responds with a combined result for the client to process
+
+
+Typical Batch Request Workflow
+Step	        - Client Action	        -      Server Action
+Prepare batch	- Group multiple intended requests into a batch payload (JSON) - Receive and validate the batch format
+
+Send single HTTP call	- Transmit the single batch request to the API/server	- Unpack the batch into individual sub-requests
+
+Await combined response	- Wait for the unified response, instead of many separate ones	- Process each sub-request (sequentially/parallel), aggregate outcomes
+
+Handle response & errors	- Parse and manage output from all sub-operations together	- Return structured, aggregated response with all results/errors
+
+
+Note: Excessive batching can burden servers under heavy concurrent load. It's important to monitor server resource impact and tune batch sizes appropriately

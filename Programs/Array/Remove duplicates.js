@@ -1,4 +1,7 @@
 let arr = [1, 2, 4, 1, 1, 2, 3, 4];
+//                           i
+// let sortedArr = [1, 2, 3, 4, 2, 2, 3, 4, 4];
+//                                          j
 
 // 1 IMP
 let uniq = [...new Set(arr)];
