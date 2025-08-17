@@ -60,7 +60,17 @@ console.log(element);
 // Hoisting - var, let, const
 // generator function yield ??
 // Unit test for react hook
+
+// ------------------------------------------------------------------
+
 // Why we can't write hooks inside if condition
+// Hooks are executed in the order they are defined at the top level of the component function, every time the component renders.
+// If the order of hooks is ever changed or a hook is called conditionally, React cannot correctly track state, leading to errors.
+// Conditional hook calls cause "state slot shift" bugs—later hooks receive the wrong state/effect slot, breaking your app in subtle and hard-to-debug ways. Always call hooks unconditionally.
+
+// ------------------------------------------------------------------
+
+
 // How does React manages hooks internally
 // Code spliting and bundling
 // Typescript - difference b/w types and interface
@@ -116,3 +126,69 @@ async function asyncFun() {
 asyncFun();
 
 console.log(7); // 7. synchronous code
+
+
+
+// Round 3
+
+// System Design of Stock list app
+// 1. What is the data structure you will use to store the stock list ?
+// 2. What is the data structure you will use to store the stock list for filtering?
+
+// ------------------------------------------------------------------
+
+// Order in which react hooks and jsx render ?
+
+// 1. Order of React Hooks Execution
+// Hooks are executed in the order they are defined at the top level of the component function, every time the component renders.
+
+// Hooks must not appear inside loops, conditions, or nested functions. They should be at the top level so that React can associate their call order with their internal state/tracking.
+
+// On each render, React steps through the hooks array (internally maintained as a stack), associating state, refs, effects, and so on based on the position/order they are called.
+
+// If the order of hooks is ever changed or a hook is called conditionally, React cannot correctly track state, leading to errors.
+
+// 2. JSX Render and How it Relates to Hooks
+// Rendering means React executes your component function from top to bottom.
+
+// Each time state or props change, the component function re-runs from the start: all local variables and hook calls are re-created, but React reuses the state from the previous render for each hook—in order.
+
+// The JSX block (returned from the component function) is evaluated only after all hooks and local logic have been processed
+
+// 3. Lifecycle and useEffect Order
+// useEffect hooks run after the DOM has been updated, never during render.
+
+// If you have multiple useEffect hooks in your component, they will run in the order they appear in your code after the component has rendered.
+
+// On re-renders, React compares dependencies to determine if an effect should re-run.
+
+// 4. JSX and Component Render Tree
+// All hooks are executed before any rendering occurs, as part of running the component function.
+
+// JSX is returned, and React builds a virtual DOM tree.
+
+// Render order for components in the tree (parent and children) follows a depth-first traversal: children finish rendering before their parent finishes.
+
+// Summary Table
+// Action	       - Order/Timing
+// Hooks execution	- Top-down, in order of definition, every render
+// JSX evaluation	- After all hooks and logic, each render
+// useEffect execution	- In code order, after DOM update
+// Render tree	- Children first (depth-first), then parent
+
+// Key Rules to Remember
+// Always call hooks in the same order and at the top level.
+
+// Never call hooks conditionally or inside loops.
+
+// JSX is only “rendered” once all hooks and logic complete.
+
+// Effects (like useEffect) execute after rendering, not during.
+
+// Parent component rendering completes after all children finish.
+
+// By following these rules, you ensure React’s reconciliation process and state management works correctly. This understanding is fundamental for debugging and writing robust React code
+
+// ------------------------------------------------------------------
+
+// Create a custom hook for useState

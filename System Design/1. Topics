@@ -7,25 +7,26 @@ RADIO - Requirements, High Level Architecture, Data model, Interface, Optimizati
       Functional
         Must have
           - Post feed
-          - Post support text, image and videos - Image Optimization / Video Optimization ??
+          - Post support text, image (ask size of image) and videos - Image Optimization / Video Optimization
           - Infinite scroll - with virtualized list (react-window)
             - Use Intersection observer
             - Use Infinite Scroll Library
           - Add, delete or edit post
           - Like or comment on post
           - Basic user profiles
+          - Active users ??
         Nice to have
-          - Internationalization (multi-language)
           - Advanced privacy controls
           - Search functionality
       Non Functional
         - Performance - Fast load time (under 500ms per load)
         - Mobile support - responsive layouts
         - Offline access - Cache recent posts, support offline reads
-        - Accessibility - Keyboard navigation, screen-reader support
+        - Accessibility - Semantic elements, Keyboard navigation (Tab index or Tab Order), screen-reader support, color contrast, REM font, Aria labels
+        - Internationalization (multi-language)
         - Security - Secure authentication, XSS prevention
         - Scalability - The system must scale to millions of users
-        - Observability - Error logging, monitoring performance
+        - Observability - Error logging, monitoring performance, tracking user journey
         - Data consistency - Real time updates vs eventual consistency
     -> Napkin math (Scale estimation) ??
     -> Clarify user roles and access patterns
@@ -63,10 +64,10 @@ RADIO - Requirements, High Level Architecture, Data model, Interface, Optimizati
         │                        │                        │
         ▼                        ▼                        ▼
  ┌───────────────┐      ┌────────────────┐        ┌──────────────────┐
- │    View       │      │  ViewModel     │        │     Model        │
- │ (UI Component)│      │ (Hooks /       │        │ (API layer /     │
- │               │      │  Container Comp│        │  Business Logic) │
- └──────┬────────┘      └──────┬─────────┘        └──────────┬───────┘
+ │    View       │ uses │  ViewModel     │fetches/│     Model        │
+ │ (UI Component)│----->│ (Hooks /       │------->│ (API layer /     │
+ │               │      │  Container Comp│ updates│  Business Logic) │
+ └──────┬────────┘      └──────┬─────────┘<-------└──────────┬───────┘
         │                     uses                        fetches /
         │               ┌──────────────┐                  updates
         │               ▼              ▼
@@ -119,6 +120,7 @@ RADIO - Requirements, High Level Architecture, Data model, Interface, Optimizati
       - Consumes more bandwidth and server resources.
       - Less efficient, especially when updates are rare.
       - Real-time experience is limited due to fixed delays.
+      - Slower
     -> Long polling ??
       - Server controls the timing.
       - Server holds the request until new data is available or it times out.
@@ -126,15 +128,25 @@ RADIO - Requirements, High Level Architecture, Data model, Interface, Optimizati
       - Fewer requests overall, making it more efficient.
       - Better use of resources.
       - Provides a near real-time experience.
-    -> WebSockets - Full duplex persistent 2-way communication - Need deep research ??
+      - Slower
+      - Easy to load balance ??
+      - Firewall protection ??
+    -> WebSockets - Full duplex persistent 2-way communication over 1 single TCP connection - Need deep research ??
       - Chat application (real time messaging b/w users)
       - Collaborative editing (multiple users editing the same document)
+      - Fast
+      - Expensive - Takes up lot of memory on server and client to keep the connection open
+      - Need to create Firewalls and load balancing yourself ??
+      - Not http2 friendly - no multiplexing ??
     -> Server Sent Events (SSE) - Server pushes data to client, client receives in real time (one way communication)
       - Live notifications (Instant alerts or status updates)
       - AI/Streaming response (Streaming generated text like ChatGPT)
-    -> GraphQL
+    -> GraphQL - Pull the data we need
       - Profile/Settings management (fetching and updating user preferences)
       - Analytics dashboard (loading & filtering resports or metrics)
+      - HTTP2 friendly
+      - Type friendly
+    -> Web rtc
 
     -> HTTP1 vs HTTP2 -> https://frontendlead.com/system-design/web-protocols-cheat-sheet - Create diagram in Excalidraw and save it
       - Supports multiplexing (no more request blocking) - allowing multiple requests and response to be sent asynchronously over a single TCP connection reducing latency and improves page load time.
@@ -302,12 +314,13 @@ RADIO - Requirements, High Level Architecture, Data model, Interface, Optimizati
           - Apollo Client for GraphQL data ?? - Learn
         - Batch request
         - Image Optimizations
-        - Bundle Solitting / Lazy loading
+        - Bundle Splitting / Lazy loading
         - Compress all static resources
           - Use Webpack Compression Plugins During Build
     - Rendering bottlenecks: Too much DOM, inefficient updates, or unoptimized rendering cycles. Rendering is where users differentiate between a slow and a fast app. If your UI lags, jumps around, or doesn't load content in the correct order, people notice immediately
 
     - JavaScript execution: Heavy libraries, unnecessary code, or blocking scripts.
+      - Delegate some work like Calculations to web worker - This will not block the JS thread
     - Asset delivery: Large images, fonts, or video assets that slow down page loads.
     - Device constraints: Slow CPUs, low memory, or poor graphics on specific user devices.
    -> How to Measure Performance in a React App
@@ -335,16 +348,25 @@ RADIO - Requirements, High Level Architecture, Data model, Interface, Optimizati
       - Always measure first, find bottlenecks, then optimize based on real user data.
 
   6. Accessibility
-    -> Keyboard navigation
-    -> Screen reader support
-    -> Color constrast
+    -> Keyboard navigation - Enables navigation without a mouse; essential for motor-impaired and screen reader users
+    -> Screen reader support - aria attributes - Provides semantic info for assistive technologies to convey UI structure and state
+    -> Color constrast - Ensures text and UI elements are distinguishable by users with visual impairments
+    -> REM fonts - Allows font size scaling respecting user preferences for better readability
+    -> HTML semantics element
 
-  7. Security
+
+  7. Security: https://frontendlead.com/system-design/frontend-security-best-practices-for-web-applications
     -> Authentication
     -> Authorization
-    -> XSS
-    -> CORS
-    -> CSP
+    -> XSS - Cross Site Scripting attack - injects malicious script
+      - React comes with sanitization or you can use DOMPurify API to sanitize HTML
+      - Use correct Content Security Policy Headers so that we are requesting data and it's coming from trusted source
+      - Input validation and sanitization
+    -> CORS - Ensure correct Cross Origin Resource Sharing policy to make sure that the data which we are receiving is from the trusted source
+    -> HTTPS - Secure and Performant
+    -> Cross Site Request Forgery (CSRF) Protection - CSRF tokens and Same-Site Cookies
+    -> Session management
+    -> Dependency scanning
 
 
 --------------------------------------
@@ -481,7 +503,6 @@ Video Optimizations
 
 Audio Track Removal: For muted or background videos, removing the audio track reduces file size and bandwidth
 
-Resolution Reduction: Deliver videos in resolutions appropriate for the display context (e.g., 720p instead of 4K) to avoid unnecessarily large files
 
 Video Poster Images: Use a poster attribute to show an image placeholder before the video loads, improving perceived performance, though it adds some extra request overhead
 

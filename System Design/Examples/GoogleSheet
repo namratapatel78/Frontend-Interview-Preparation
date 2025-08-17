@@ -1,1 +1,15 @@
 https://viewer.diagrams.net/index.html?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=GSheet-System-Design.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1Ca3fmVk-UDWlfhj_Mf6G4d4hl-zJqt6L%26export%3Ddownload#%7B%22pageId%22%3A%22g7DTx-Do2TmImGtkupXi%22%7D
+
+https://www.perplexity.ai/search/answer-me-wrt-frontend-system-26.8RVC.SvaSSLqvHFogaA
+
+- Use DOM-based rendering for cells rather than canvas for easier interaction and accessibility.
+- Implement vertical and horizontal virtualization to render only visible rows and columns for performance (lazy loading on scroll).
+
+
+DOM-based rendering
+- Uses the Document Object Model (DOM) where each visual element (like a cell, button, or text) is an HTML element.
+- uses HTML elements managed by the browser, excels in interactivity and accessibility but can be slower with many elements.
+
+Canvas rendering
+- Uses a single <canvas> element where graphics are drawn pixel-by-pixel via JavaScript drawing APIs.
+- draws pixels directly in a bitmap for fast, complex graphics but requires manual handling of interactions and offers limited accessibility.

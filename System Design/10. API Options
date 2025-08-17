@@ -1,0 +1,11 @@
+Feature	WebSockets	Server-Sent Events (SSE)
+Communication Type	Full-duplex (two-way): client and server can send data simultaneously.	Unidirectional (server to client only).
+Underlying Protocol	Custom protocol over a single TCP connection, requiring a handshake to upgrade HTTP.	Built on standard HTTP/1.1 or HTTP/2 connection, no handshake needed.
+Data Type Support	Supports both binary and UTF-8 text data.	Supports only UTF-8 text data.
+Connection Management	Requires explicit handling of connection lifecycle including reconnections.	Automatic reconnection and event ID tracking built-in by browser default.
+Firewall and Proxy Issues	Can be blocked or problematic behind certain corporate firewalls or proxies because of non-HTTP protocol.	Works over HTTP, so it passes easily through firewalls and proxies.
+Browser Limits	No specific browser-imposed limit on open connections (limited by server capabilities).	Usually limited to 6 concurrent connections per browser.
+Implementation Complexity	More complex to implement and maintain due to two-way state. Requires WebSocket server support.	Simpler to implement on server side; can use plain HTTP servers.
+Use Cases	Real-time interactive apps requiring bidirectional communication such as chat, multiplayer games, collaborative editing.	Real-time feeds like live news, stock tickers, notifications where client mainly receives updates.
+Performance	Lower overhead after connection established, efficient for high-frequency, low-latency data exchange.	Slightly higher overhead due to HTTP headers but good enough for many real-time update scenarios.
+Scalability	More challenging due to persistent, bidirectional connections.	Easier to scale leveraging existing HTTP infrastructure.

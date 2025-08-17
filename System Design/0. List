@@ -1,0 +1,51 @@
+RADIO
+
+Requirements:	Ask clarifying questions and state assumptions (scale, features, clients)
+Architecture:	Sketch high-level frontend architecture (components, data flow)
+Data Model:	Define key data entities for frontend state
+Interface (API):	Discuss API design, data fetching, caching strategies
+Optimization:	Discuss performance, accessibility, error states
+
+FUNCTIONAL REQUIREMENTS
+1. Infinite scroll - Intersection observer & Virtualization
+
+NON FUNCTIONAL REQUIREMENTS
+1. SSR vs CSR
+  - SSR -> Faster initial loading and SEO
+  - CSR -> Slower initial loading and for more interactive UI
+  - Hybrid rendering: SSR for initial loading and CSR for interactions - need more resources
+2. Mobile responsive
+3. Performance
+4. Accessibility
+5. Internationalization (multi-language)
+6. Observability
+7. Offline access
+8. Scalability - The system must scale to millions of users
+9. Security
+  - Secure authentication
+  - XSS prevention (input validation and html sanotization)
+  - CORS policy
+  - Rate limiting
+  - CSRF (use Same-Site cookie or CSRF token)
+10. React vs Angular vs Vue
+11. Browser compatibility
+
+HIGH LEVEL ARCHITECTURE
+- MVVM or MVC
+  - MVVM - Diagram for how is the connection b/w View, ViewModel and Model
+  - MVC - Need diagram for how is the connection b/w View, ViewModel and Model ??
+- Create UI wireframe
+- Divide into components
+- Media upload: Pre-signed URLs → Cloud Storage → CDN delivery
+
+
+DATA MODEL and API DESIGN
+- List down entities
+- Mention state, store (Context or Redux)
+- API contract
+
+API INTERFACE - Data Transfering Protocol
+- Choose API protocol - REST, GraphQl, Websocket, SSE
+
+OPTIMIZATIONS
+-

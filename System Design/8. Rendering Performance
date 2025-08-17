@@ -1,14 +1,25 @@
 Rendering Performance
-  -> SSR
+  -> SSR or CSR or Hybrid rendering ?? (SSR for initial load, CSR for interactions)
   -> Application cache - Local storage, Cookies, Session storage
   -> FP, FCP, LCP, TTI, CLS
   -> Skeleton loaders
   -> Handle success, errors and loading state
   -> Mobile friendly
+  -> Bundle Splitting
   -> Preload JS when needed - Lazy loading
-  -> Import only what you need
+  -> Import only what you need - import only the required function from the package
   -> Defer non critical script
   -> Virtualization
+    - Used for rendering large lists. Instead of rendering all items in the list, which can lead to performance issues and slow down the application, virtualization only renders the items that are currently visible within the user's viewport.
+    - As the user scrolls, the window dynamically moves. Components that scroll out of view are unmounted (removed from the DOM), and new components that scroll into view are mounted (added to the DOM). This significantly reduces the number of DOM nodes React needs to manage, leading to improved performance.
+    - it tries to reuse existing DOM elements and update their content as the user scrolls to minimize expensive DOM operations.
+
+       Aspect	                  - Explanation
+    1. Components unmount/mount -	Items leaving viewport are unmounted; new visible items mounted (React lifecycle).
+
+    2. DOM nodes reuse/recycle	- Underneath, virtualization often reuses a pool of DOM nodes by moving and updating them for new items, minimizing costly DOM operations and improving performance.
+
+
   -> Rate limit - Throttle / Debounce
   -> Tree Shaking - Eleminate dead code
     Example steps in a CRA or Webpack-based project:

@@ -1,0 +1,85 @@
+DONE:
+
+React Fiber and how react works internally
+DOM rendering vs Canvas
+
+Webpack vs vite etc
+
+------------------------------------------------------------------
+
+CSS preprocessors - SCSS, Tailwind CSS, CSS - https://www.perplexity.ai/search/answer-me-wrt-frontend-system-zp3CSVNhRUuQPZyTmiWyJg
+
+
+Use SCSS when building complex, scalable frontend systems that need highly customized styling patterns and maintainable CSS architecture.
+
+Use Tailwind CSS to accelerate development with utility-first styling, especially for large teams needing consistency and speed.
+
+Use vanilla CSS mainly for simple or legacy projects.
+
+------------------------------------------------------------------
+React vs Anglular vs Vue: https://www.perplexity.ai/search/react-vs-anglular-vs-vue-what-e6ZfJggFRWikhJb3dCad0w
+
+------------------------------------------------------------------
+
+Chat application
+
+------------------------------------------------------------------
+
+svg vs canvas
+
+------------------------------------------------------------------
+
+Image or video upload component : The image upload flows from the user → frontend validation → get pre-signed URL → frontend uploads directly to cloud storage → cloud storage serves as CDN origin → CDN caches and delivers the image globally → frontend gets CDN URL to display the image.
+
+------------------------------------------------------------------
+
+How to implement notification in web app: https://www.perplexity.ai/search/how-to-implement-notification-v.0_BY1BQBGzVM7rrCD60w
+
+------------------------------------------------------------------
+
+Calculations based on assumptions for Scale
+Example for Instagram
+- 1 million daily active users - 100,0000
+- 1 daily post per user / 100 post view per post -> read / write ratio
+- 1pm lunch tine, 9pm evening - 70% users active
+- 700,000 active users during peak time
+- 100 * 700,000 - (8 to 10) - 2hr
+- 100 * 700000 / (2 * 60 * 60) = 10k rps (request persecond) - load on server
+
+Common Assumptions in Frontend System Design Interviews
+
+1. User Scale and Traffic
+
+Approximate number of users or concurrent users (e.g., millions of daily active users for Instagram).
+
+Average requests per second (RPS) or peak load to estimate scalability needs.
+
+2. Device and Browser Environment
+
+Target platforms (desktop web, mobile browsers, native apps, etc.).
+
+Network conditions (slow mobile networks, offline usage).
+
+3. Performance and Latency Requirements
+
+What is an acceptable load time or interaction latency?
+
+What are the expectations around animation smoothness or responsiveness?
+
+4. Functional Requirements and Features
+
+Core features in scope (e.g., feed display, uploading posts, commenting).
+
+Whether features like real-time updates, offline mode, or multi-device sync are required.
+
+5. Non-Functional Requirements
+
+Accessibility support, internationalization, security concerns.
+
+Scalability and maintainability expectations.
+
+6. Technology Stack Constraints
+
+Whether certain frontend frameworks/libraries are mandated or preferred.
+
+Restrictions on using certain backend APIs or services.

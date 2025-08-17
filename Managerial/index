@@ -1,0 +1,48 @@
+The most challenging work I led was the comprehensive redesign and modernization of the Scripbox web and mobile apps, where I managed a five-member frontend squad.
+
+
+Situation:
+At Scripbox, the business aimed to boost user engagement and satisfaction rapidly, but our frontend system was fragmented with technical debt, inconsistent code, and slow release cycles. The codebase was very old, we were using class components of react with flux. The code base was cluttered.
+
+Task:
+As the Senior Frontend Engineer leading a five-member squad, I needed to architect and deliver a scalable, maintainable frontend platform for both web and mobile, balancing speed, quality, and security.
+
+Action:
+
+Designed and led the creation of a reusable component library using ShadCN and Tailwind CSS, unifying UI across React and React Native apps.
+
+Rolled out TypeScript and Redux Toolkit to streamline state management, improving development speed by 20%.
+
+Piloted a git-submodules workflow that improved deployment efficiency by 25%, gaining stakeholder buy-in through a proof-of-concept.
+
+Implemented performance optimizations including lazy loading, code-splitting, and image optimization, reducing page load times by 20%.
+
+Built a hardened authentication library supporting Google OAuth, biometrics, and auto-token refresh, unifying security for web and mobile sign-in.
+
+Hardened CI/CD pipelines with GitHub Actions, ESLint, Prettier, Husky, and Lint-Staged hooks to improve code quality and reduce release lead time.
+
+Enforced strict cross-browser QA and authored living technical documentation to accelerate onboarding and cross-team collaboration.
+
+Result:
+The project resulted in a 30% increase in user engagement, 20% higher user satisfaction, faster performance, and a secure, maintainable codebase—transforming both the product experience and team culture.
+
+1. Challenging work
+
+Redesign and modernization of the Scripbox web and mobile app, where I managed a five member frontend squad
+
+
+SITUATION: Boost user engagement and satisfaction rapidly.
+
+
+questions to ask the manager:
+- how does a typical dev cycle looks like
+- any ai projects or integrations that we are working on
+- where will i be involved?
+- any interesting challenge or project that we are working on or solving
+
+
+why blackline
+You appreciate your achievements and experiences at Scripbox.
+
+Learning opportunities have become limited; you’re seeking fresh challenges.
+Benn working in startups for all og my career so really wanted an exposure like BlackLine which offers global enterprise scale, colloboration with many more teams, learning processes an workings for me to grow further and sometime later be equipped to become a leader

@@ -2,6 +2,8 @@ https://www.perplexity.ai/search/caching-client-side-and-cdn-wh-9HRfgsohQkSoJH7r
 
 https://www.perplexity.ai/search/caching-client-side-and-cdn-wh-9HRfgsohQkSoJH7rmqSiuQ
 
+In summary: Compression headers apply to both static and dynamic resources, not just static resources—provided server configuration and the type of resource allow it
+
 🔧 What Are Compression Headers?
 They are HTTP headers used by the client to request compressed content and by the server to respond with compressed data.
 

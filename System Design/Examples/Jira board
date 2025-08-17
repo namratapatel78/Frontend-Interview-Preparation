@@ -1,0 +1,26 @@
+https://frontendlead.com/system-design/design-sprint-board-frontend-system-design
+
+1. Drag and Drop feature - Native HTML Draggable API
+
+draggable attribute: Set draggable="true" on any HTML element (like a div, image, or paragraph) to make it draggable.
+
+dragstart event: Add an event listener for dragstart to customize the drag behavior or to set drag data.
+
+
+<img id="img1" draggable="true" ondragstart="event.dataTransfer.setData('text', event.target.id)">
+<div id="dropzone" ondrop="onDrop(event)" ondragover="event.preventDefault()"></div>
+<script>
+function onDrop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("text");
+  event.target.appendChild(document.getElementById(data));
+}
+</script>
+
+Common Draggable API Events:
+
+dragstart: Begin dragging.
+drag: While dragging.
+dragend: When the drag operation is finished.
+dragover: While dragging over a drop target.
+drop: The draggable is released on a drop target.

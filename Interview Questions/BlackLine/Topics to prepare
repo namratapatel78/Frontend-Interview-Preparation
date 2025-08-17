@@ -1,0 +1,19 @@
+React Fiber and how react works internally
+CSS preprocessors - SCSS, Tailwind CSS, CSS
+React vs Anglular vs Vue
+svg vs canvas
+Screen reader support - aria attributes
+
+
+
+Calculations based on assumptions for Scale
+Example for Instagram
+- 1 million daily active users - 100,0000
+- 1 daily post per user / 100 post view per post -> read / write ratio
+- 1pm lunch tine, 9pm evening - 70% users active
+- 700,000 active users during peak time
+- 100 * 700,000 - (8 to 10) - 2hr
+- 100 * 700000 / (2 * 60 * 60) = 10k rps (request persecond) - load on server
+
+
+Image or video upload component

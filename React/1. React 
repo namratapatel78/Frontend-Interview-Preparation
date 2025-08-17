@@ -1,0 +1,30 @@
+Virtual DOM - Lightweight JavaScript object representation of the real DOM - Tree. Virtual DOM is the concept of representing the UI as an in-memory JavaScript object tree. React creates this tree from React elements (JSX) describing the UI structure.
+
+Reconciiliation (diffing algorithm) - Reconciliation is the process of diffing and updating the Virtual DOM trees when state or props change so that only the minimal set of changes is applied to the real DOM.
+
+React Fiber - React Fiber is the new reconciliation algorithm and architecture introduced in React 16 that enables incremental, interruptible, and prioritized rendering of the Virtual DOM. It breaks down rendering work into small units of work called fibers, allowing React to pause, resume, and prioritize updates.
+
+Fiber tree — a linked list data structure representing units of work for reconciliation
+
+In other words, Fiber is a reimplementation of the Virtual DOM reconciliation process — it still operates on Virtual DOM representations (React elements) but does so asynchronously and more efficiently.
+
+
+
+                   React Elements (JSX)
+                            │
+                            ▼
+                   Virtual DOM Tree
+       (Lightweight JS object representation of UI)
+                            │
+                            ▼
+                React Fiber Architecture
+       (Fiber tree — a linked list data structure
+        representing units of work for reconciliation)
+                            │
+                            ▼
+              Efficient Reconciliation Process:
+       - Breaks rendering into small interruptible work units
+       - Pauses, resumes, and prioritizes updates
+                            │
+                            ▼
+            Minimal Updates applied to Real DOM
